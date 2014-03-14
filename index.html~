@@ -50,6 +50,8 @@
               <li><a href="#about">About</a></li>
               <li><a href="#features">Features</a></li>
               <li><a href="#download">Download</a></li>
+              <li><a href="#paper">Paper</a></li>
+	      <li><a href="#contact">Contact</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -323,6 +325,28 @@
        -->
         
       </div>
+
+
+	
+ <div class="container" id="paper">
+          <div class="row">
+            <div class="span6">
+              <h3>Paper & Slides</h3>
+              <p><a href="https://dl.dropboxusercontent.com/u/75845627/buildsys_paper.pdf">Author version</a></p>
+		<p>Slides presented at Buildsys 2013</p>
+            </div>
+
+            <div class="span6">
+              <h3>Citation</h3>
+              <p><a href="https://dl.dropboxusercontent.com/u/75845627/bib/2013_buildsys.bib">Bibtex</a></p>
+              
+            </div>
+		
+          </div>
+          
+          </div>
+        </div>
+
     </div> <!-- /container -->
     <!-- Footer items -->
     <footer>
