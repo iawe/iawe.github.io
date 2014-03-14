@@ -194,7 +194,17 @@
         </div>
       </div>
 
-
+<div class="row">
+            <div class="span8">
+              <p class="lead">Voltage can be observed to fluctuate a lot. While the rated voltage is 230 V, we observed voltages ranging from 180-260V.</p>
+              
+          </div>
+          <div class="span4">
+            <!-- Put your photo link in the src attribute -->
+            <img class="img-polaroid" src="img/voltage.png" width="80%" alt="">
+          </div>
+        </div>
+      </div>
 
 
 	<div class="row">
