@@ -48,7 +48,6 @@
             <ul class="nav pull-right">
               <li class="active"><a href="#myCarousel">Home</a></li>
               <li><a href="#about">About</a></li>
-              <li><a href="#screenshots">Screenshots</a></li>
               <li><a href="#features">Features</a></li>
               <li><a href="#download">Download</a></li>
             </ul>
@@ -126,6 +125,8 @@
     </div>
 
 
+
+
     
   </div>
   <!-- Carousel nav -->
@@ -194,17 +195,7 @@
         </div>
       </div>
 
-<div class="row">
-            <div class="span8">
-              <p class="lead">Voltage can be observed to fluctuate a lot. While the rated voltage is 230 V, we observed voltages ranging from 180-260V.</p>
-              
-          </div>
-          <div class="span4">
-            <!-- Put your photo link in the src attribute -->
-            <img class="img-polaroid" src="img/voltage.png" width="80%" alt="">
-          </div>
-        </div>
-      </div>
+
 
 
 	<div class="row">
@@ -233,34 +224,38 @@
 
       <div class="divider"></div>
         
-      <!-- Screenshot items -->
-      <div id="screenshots" class="row">
-        <h1>Check some great screenshots</h1>
-        <!-- Put your photo link in the src attribute -->
-        <div class="span2"><img class="img-polaroid" src="http://placehold.it/200x200" alt=""></div>
-        <div class="span2"><img class="img-polaroid" src="http://placehold.it/200x200" alt=""></div>
-        <div class="span2"><img class="img-polaroid" src="http://placehold.it/200x200" alt=""></div>
-        <div class="span2"><img class="img-polaroid" src="http://placehold.it/200x200" alt=""></div>
-        <div class="span2"><img class="img-polaroid" src="http://placehold.it/200x200" alt=""></div>
-        <div class="span2"><img class="img-polaroid" src="http://placehold.it/200x200" alt=""></div>
-      </div>
       <div class="divider"></div>
       <!-- Screenshot items -->
       <div id="features" class="row">
         <div class="span4">
           <img src="img/gear-icon.png" alt="">
-          <h3>Feature 1</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos molestiae quae quos fugit voluptates sunt fuga debitis veniam expedita ab ut quidem itaque magnam quo consectetur perferendis odit obcaecati suscipit.</p>
+          <h3>Github repo</h3>
+          <p>Take a look at our <a href="https://github.com/nipunreddevil/Home_Deployment">Github repository</a> which contains all the issues we faced and how we resolved them.</p>
+        </div>
+	<div class="span4">
+          <img src="img/gear-icon.png" alt="">
+          <h3>What about DB schemas?</h3>
+          <p>Right <a href="https://github.com/nipunreddevil/Home_Deployment/tree/master/configuration/db_schemas">here</a>! Making it easy for you to replicate such deployments.</p>
         </div>
         <div class="span4">
           <img src="img/monitoring-icon.png" alt="">
-          <h3>Feature 2</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium tenetur voluptate. Debitis ut tempora voluptate repellat. Est dolore provident laudantium veritatis odit necessitatibus quibusdam vitae harum beatae vero labore aliquam?</p>
+          <h3>Starter IPython notebooks</h3>
+          <p>Why take trouble and code from scratch? Start with our <a href="http://nbviewer.ipython.org/github/nipunreddevil/Home_Deployment/tree/master/notebooks/">IPython notebooks</a> which illusrate common functionalities</p>
         </div>
         <div class="span4">
           <img src="img/multi-files-icon.png" alt="">
-          <h3>Feature 3</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste magni molestiae sed commodi magnam doloribus recusandae dolorum reprehenderit aspernatur ad earum at provident voluptatum expedita laborum fugit praesentium culpa autem!</p>
+          <h3>Metadata</h3>
+          <p>Wouldn't it be useful if the <a href="https://github.com/nipunreddevil/Home_Deployment/wiki/Appliance-Metadata">rated power</a> of all appliances was known? Or which appliance is mapped to which <a href="https://github.com/nipunreddevil/Home_Deployment/blob/master/configuration/circuits.md">circuit</a>? Check out our <a href="https://github.com/nipunreddevil/Home_Deployment/tree/master/configuration">metadata</a> to know more.</p>
+        </div>
+<div class="span4">
+          <img src="img/multi-files-icon.png" alt="">
+          <h3>Installation instructions</h3>
+          <p>How to download the data set and quickly set up the environment</p>
+        </div>
+<div class="span4">
+          <img src="img/multi-files-icon.png" alt="">
+          <h3>Why so many sensors?</h3>
+          <p>Take a look <a href="https://github-camo.global.ssl.fastly.net/d30aa5a421c900d1b2b55e5f863a5be0cc024b90/68747470733a2f2f646c2e64726f70626f7875736572636f6e74656e742e636f6d2f752f37353834353632372f4465706c6f796d656e742f6c6162656c5f616e6e6f74617465642e706e67">here</a>! You will realize the additional value by summing up sensor data.</p>
         </div>
       </div>
       <div class="divider"></div>
@@ -331,7 +326,7 @@
     </div> <!-- /container -->
     <!-- Footer items -->
     <footer>
-        <div class="container">
+        <div class="container" id="contact">
           <div class="row">
             <div class="span6">
               <h3>Acknowledgements</h3>
