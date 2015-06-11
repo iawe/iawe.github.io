@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <!-- saved from url=(0066)http://twitter.github.com/bootstrap/examples/starter-template.html -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <title>iAWE</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,9 +12,9 @@
     <!-- Le styles -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <style>
-      body {
+        body {
         padding-top: 40px; /* 60px to make the container go all the way to the bottom of the topbar */
-      }
+        }
     </style>
     <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
@@ -21,348 +23,400 @@
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
     <!-- Fav and touch icons -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-114-precomposed.png">
-      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-72-precomposed.png">
-                    <link rel="apple-touch-icon-precomposed" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-57-precomposed.png">
-                                   <link rel="shortcut icon" href="http://twitter.github.com/bootstrap/assets/ico/favicon.png">
- </head>
+    <link rel="apple-touch-icon-precomposed" sizes="144x144"
+          href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114"
+          href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72"
+          href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed"
+          href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="http://twitter.github.com/bootstrap/assets/ico/favicon.png">
+</head>
 
-  <body>
-    
-     <!-- Navbar items -->
-    <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="navbar-inner">
+<body>
+
+<!-- Navbar items -->
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
         <div class="container">
-          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </a>
-          <a class="brand" href="#myCarousel">iAWE</a>
-          <div class="nav-collapse collapse">
-            <ul class="nav pull-right">
-              <li class="active"><a href="#myCarousel">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#features">Features</a></li>
-              <li><a href="#download">Download</a></li>
-              <li><a href="#paper">Paper</a></li>
-	      <li><a href="#contact">Contact</a></li>
-            </ul>
-          </div><!--/.nav-collapse -->
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+            <a class="brand" href="#myCarousel">iAWE</a>
+
+            <div class="nav-collapse collapse">
+                <ul class="nav pull-right">
+                    <li class="active"><a href="#myCarousel">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#download">Download</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#paper">Paper</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
         </div>
-      </div>
     </div>
-    
-    <div id="myCarousel" class="carousel slide">
-  <!-- Carousel items -->
-  <div class="carousel-inner">
-    <div class="active item">
-     <!-- Put your photo link in the src attribute -->
-      <img src="img/overall_deployment.jpg" width="100%" height="35%" alt="">
-      <div class="container">
-            <div class="carousel-caption">
-              <h1>Overall deployment</h1>
-              
-            </div>
-      </div>
-    </div>
-    <div class="item">
-      <!-- Put your photo link in the src attribute -->
-      <img src="img/water_meter.jpg" alt="">
-      <div class="container">
-            <div class="carousel-caption">
-              <h1>Pulse based Water meter</h1>
-             
-            </div>
-          </div>
-    </div>
-
-    <div class="item">
-      <!-- Put your photo link in the src attribute -->
-      <img src="img/ambient.jpg" alt="">
-      <div class="container">
-            <div class="carousel-caption">
-              <h1>Ambient paramter sensing</h1>
-             
-            </div>
-          </div>
-    </div>
-
-     <div class="item">
-      <!-- Put your photo link in the src attribute -->
-      <img src="img/ct_interference.jpg" alt="">
-      <div class="container">
-            <div class="carousel-caption">
-              <h1>Electricity<br/> measurement<br/>at circuit<br/>level </h1>
-             
-            </div>
-          </div>
-    </div>
-
- <div class="item">
-      <!-- Put your photo link in the src attribute -->
-      <img src="img/jplug.jpg" alt="">
-      <div class="container">
-            <div class="carousel-caption">
-              <h1>Electricity<br/> measurement<br/>at appliance<br/>level </h1>
-             
-            </div>
-          </div>
-    </div>
-
- <div class="item">
-      <!-- Put your photo link in the src attribute -->
-      <img src="img/meter.jpg" alt="">
-      <div class="container">
-            <div class="carousel-caption">
-              <h1>Electricity<br/> measurement<br/>at meter<br/>level </h1>
-             
-            </div>
-          </div>
-    </div>
-
-
-
-
-    
-  </div>
-  <!-- Carousel nav -->
-  <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-  <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
 </div>
-    
-     <!-- Page items -->
-    <div class="container">
-       <!-- About items -->
-      <div id="about">
+
+<div id="myCarousel" class="carousel slide">
+    <!-- Carousel items -->
+    <div class="carousel-inner">
+        <div class="active item">
+            <!-- Put your photo link in the src attribute -->
+            <img src="img/overall_deployment.jpg" width="100%" height="35%" alt="">
+
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>Overall deployment</h1>
+
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <!-- Put your photo link in the src attribute -->
+            <img src="img/water_meter.jpg" alt="">
+
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>Pulse based Water meter</h1>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="item">
+            <!-- Put your photo link in the src attribute -->
+            <img src="img/ambient.jpg" alt="">
+
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>Ambient paramter sensing</h1>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="item">
+            <!-- Put your photo link in the src attribute -->
+            <img src="img/ct_interference.jpg" alt="">
+
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>Electricity<br/> measurement<br/>at circuit<br/>level </h1>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="item">
+            <!-- Put your photo link in the src attribute -->
+            <img src="img/jplug.jpg" alt="">
+
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>Electricity<br/> measurement<br/>at appliance<br/>level </h1>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="item">
+            <!-- Put your photo link in the src attribute -->
+            <img src="img/meter.jpg" alt="">
+
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>Electricity<br/> measurement<br/>at meter<br/>level </h1>
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <!-- Carousel nav -->
+    <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+    <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+</div>
+
+<!-- Page items -->
+<div class="container">
+    <!-- About items -->
+    <div id="about">
         <div id="heading">
-          <h1>Indian Dataset for Ambient Water and Energy</h1>
-          <p class="lead">In the summer of 2013, we decided to instrument a home in New Delhi India with an aim to characterize the unique aspects of energy monitoring an consumption in India. In total we collected about 73 days of data. </p>  
+            <h1>Indian Dataset for Ambient Water and Energy</h1>
+
+            <p class="lead">In the summer of 2013, we decided to instrument a home in New Delhi India with an aim to
+                characterize the unique aspects of energy monitoring an consumption in India. In total we collected
+                about 73 days of data. </p>
         </div>
         <div class="divider"></div>
         <div class="row">
-          <div class="span4">
-            <!-- Put your photo link in the src attribute -->
-            <img class="img-polaroid" src="img/electricity_distribution.jpg" height="30%" width="60%" alt="">
-          </div>
-          <div class="span8">
-            <p class="lead">Electricity was measured at all 3 levels:
-		<ol>
-		<li> Electricity meter: Using Schneider Electric EM6400 sensor</li>
-                <li> Circuit panel </li>
-                <li> Appliance level</li>
-               </ol>
-		</p>
-           
-          </div>
+            <div class="span4">
+                <!-- Put your photo link in the src attribute -->
+                <img class="img-polaroid" src="img/electricity_distribution.jpg" height="30%" width="60%" alt="">
+            </div>
+            <div class="span8">
+                <p class="lead">Electricity was measured at all 3 levels:
+                <ol>
+                    <li> Electricity meter: Using Schneider Electric EM6400 sensor</li>
+                    <li> Circuit panel</li>
+                    <li> Appliance level</li>
+                </ol>
+                </p>
+
+            </div>
         </div>
         <div class="row">
             <div class="span8">
-              <p class="lead">Power outages are still common in India! Yes, even in Delhi. During the deployment, we observed power outage lasting up to 9 hours a day.</p>
-              
-          </div>
-          <div class="span4">
-            <!-- Put your photo link in the src attribute -->
-            <img class="img-polaroid" src="img/outage.png" width="80%" alt="">
-          </div>
+                <p class="lead">Power outages are still common in India! Yes, even in Delhi. During the deployment, we
+                    observed power outage lasting up to 9 hours a day.</p>
+
+            </div>
+            <div class="span4">
+                <!-- Put your photo link in the src attribute -->
+                <img class="img-polaroid" src="img/outage.png" width="80%" alt="">
+            </div>
         </div>
-      </div>
+    </div>
 
 
-	<div class="row">
-          <div class="span4">
+    <div class="row">
+        <div class="span4">
             <!-- Put your photo link in the src attribute -->
             <img class="img-polaroid" src="img/water_distribution.jpg" height="30%" width="60%" alt="">
-          </div>
-          <div class="span8">
-            <p class="lead">Water supply is not available 24X7. Infact, usually only available for a few hours a day. To overcome this, almost everyone has an overhead storage tank where water is stored. We measured the volume of water flow from the supply and usage from the overhead tank.</p>
-           
-          </div>
         </div>
-	
- <div class="row">
-            <div class="span8">
-              <p class="lead">Voltage can be observed to fluctuate a lot. While the rated voltage is 230 V, we observed voltages ranging from 180-260V.</p>
-              
-          </div>
-          <div class="span4">
+        <div class="span8">
+            <p class="lead">Water supply is not available 24X7. Infact, usually only available for a few hours a day. To
+                overcome this, almost everyone has an overhead storage tank where water is stored. We measured the
+                volume of water flow from the supply and usage from the overhead tank.</p>
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="span8">
+            <p class="lead">Voltage can be observed to fluctuate a lot. While the rated voltage is 230 V, we observed
+                voltages ranging from 180-260V.</p>
+
+        </div>
+        <div class="span4">
             <!-- Put your photo link in the src attribute -->
             <img class="img-polaroid" src="img/voltage.png" width="80%" alt="">
-          </div>
         </div>
-      </div>
+    </div>
+</div>
 
-
-
-
-	<div class="row">
-          <div class="span4">
-            <!-- Put your photo link in the src attribute -->
-            <img class="img-polaroid" src="img/network.png" height="70%" width="70%" alt="">
-          </div>
-          <div class="span8">
-            <p class="lead">What about the network? We observed that internet is not the most reliable. Packet drop is very common. We quantified that and found upt 25% packet drop a day.</p>
-           
-          </div>
-        </div>
 
 <div class="row">
-            <div class="span8">
-              <p class="lead">How did we resolve this packet drop? We introduce a notion of local storage in our arhitecture which also compensates for other failures.</p>
-              
-          </div>
-          <div class="span4">
-            <!-- Put your photo link in the src attribute -->
-            <img class="img-polaroid" src="img/architecture.jpg" width="80%" alt="">
-          </div>
+    <div class="span4">
+        <!-- Put your photo link in the src attribute -->
+        <img class="img-polaroid" src="img/network.png" height="70%" width="70%" alt="">
+    </div>
+    <div class="span8">
+        <p class="lead">What about the network? We observed that internet is not the most reliable. Packet drop is very
+            common. We quantified that and found upt 25% packet drop a day.</p>
+
+    </div>
+</div>
+
+<div class="row">
+    <div class="span8">
+        <p class="lead">How did we resolve this packet drop? We introduce a notion of local storage in our arhitecture
+            which also compensates for other failures.</p>
+
+    </div>
+    <div class="span4">
+        <!-- Put your photo link in the src attribute -->
+        <img class="img-polaroid" src="img/architecture.jpg" width="80%" alt="">
+    </div>
+</div>
+</div>
+
+
+<div class="divider"></div>
+
+<div class="divider"></div>
+<!-- Screenshot items -->
+<div id="features" class="row">
+    <div class="span4">
+        <img src="img/gear-icon.png" alt="">
+
+        <h3>Github repo</h3>
+
+        <p>Take a look at our <a href="https://github.com/nipunreddevil/Home_Deployment">Github repository</a> which
+            contains all the issues we faced and how we resolved them.</p>
+    </div>
+    <div class="span4">
+        <img src="img/gear-icon.png" alt="">
+
+        <h3>What about DB schemas?</h3>
+
+        <p>Right <a
+                href="https://github.com/nipunreddevil/Home_Deployment/tree/master/configuration/db_schemas">here</a>!
+            Making it easy for you to replicate such deployments.</p>
+    </div>
+    <div class="span4">
+        <img src="img/monitoring-icon.png" alt="">
+
+        <h3>Starter IPython notebooks</h3>
+
+        <p>Why take trouble and code from scratch? Start with our <a
+                href="http://nbviewer.ipython.org/github/nipunreddevil/Home_Deployment/tree/master/notebooks/">IPython
+            notebooks</a> which illusrate common functionalities</p>
+    </div>
+    <div class="span4">
+        <img src="img/multi-files-icon.png" alt="">
+
+        <h3>Metadata</h3>
+
+        <p>Wouldn't it be useful if the <a
+                href="https://github.com/nipunreddevil/Home_Deployment/wiki/Appliance-Metadata">rated power</a> of all
+            appliances was known? Or which appliance is mapped to which <a
+                    href="https://github.com/nipunreddevil/Home_Deployment/blob/master/configuration/circuits.md">circuit</a>?
+            Check out our <a
+                    href="https://github.com/nipunreddevil/Home_Deployment/tree/master/configuration">metadata</a> to
+            know more.</p>
+    </div>
+    <div class="span4">
+        <img src="img/multi-files-icon.png" alt="">
+
+        <h3>Installation instructions</h3>
+
+        <p>How to download the data set and quickly set up the environment</p>
+    </div>
+    <div class="span4">
+        <img src="img/multi-files-icon.png" alt="">
+
+        <h3>Why so many sensors?</h3>
+
+        <p>Take a look <a
+                href="https://github-camo.global.ssl.fastly.net/d30aa5a421c900d1b2b55e5f863a5be0cc024b90/68747470733a2f2f646c2e64726f70626f7875736572636f6e74656e742e636f6d2f752f37353834353632372f4465706c6f796d656e742f6c6162656c5f616e6e6f74617465642e706e67">here</a>!
+            You will realize the additional value by summing up sensor data.</p>
+    </div>
+</div>
+<div class="divider"></div>
+<!-- Download items -->
+<div id="download" class="row">
+
+    <h1>Download</h1>
+    <ol>
+
+        <h4>Electricity</h4>
+        <a href="https://copy.com/PkCXGYeAsI6CKl1Q">CSV,</a>
+        <a href="https://copy.com/C2sIt1UfDx1mfPlC"> nilmtk HDF5</a>
+        <br/>
+        <h4>Ambient</h4>
+        <a href="https://copy.com/IcDq9UvLUZO8">SQL (100 MB)</a>
+        <a href="https://copy.com/DcJpjVVJPURS">,Compressed SQL (15 MB)</a>
+        <a href="https://copy.com/OKq4KfIEtJSs">, PIR CSV (12 MB)</a>
+        <a href="https://copy.com/dN3rFYo2M9Kz">, Light, Temp CSV (78 MB)</a>
+        <a href="https://copy.com/FGfrtGgDUCYO">, Compressed PIR CSV (3 MB) </a>
+        <a href="https://copy.com/E76CZIaTItIC"> , Compressed Light, Temp CSV (14 MB)</a>
+        <br/>
+
+        <h4>Water</h4>
+        <a href="https://copy.com/9BOOQLqqCs2M">SQL (615 MB)</a>
+        <a href="https://copy.com/zsq0qGqbpYlj">, Compressed SQL (90 MB)</a>
+        <a href="https://copy.com/xTw0NmVi0RVn">, CSV (554 MB)</a>
+        <a href="https://copy.com/PBYdqTYpf1HI">, Compressed CSV (75 MB)</a>
+        <br/>
+
+
+        <h4>System information</h4>
+        <a href="https://copy.com/CtD7vXxGNt0k">SQL (123 MB)</a>
+        <a href="https://copy.com/OkbBcX0q8k4u">, Compressed SQL (18 MB)</a>
+        <a href="https://copy.com/xugH8DSAX2zh">, CSV (113 MB)</a>
+        <a href="https://copy.com/F3soKYcpcDrf">, Compressed CSV (18 MB)</a>
+        <br/>
+
+
+        <br/>
+        </ol>
+
+        <!-- COMMENTED
+            <ul class="inline">
+              <li><a href="#" class="btn btn-large btn-success">Try it FREE for 14 days</a></li>
+              <li><a href="#" class="btn btn-large btn-info">Buy it now</a></li>
+            </ul>
+           -->
+
+</div>
+
+<hr/>
+
+<div class="container" id="faq">
+    <h1>FAQ</h1>
+
+<script src="https://gist.github.com/nipunreddevil/52ac6e5ba32e7260c4e9.js"></script></div>
+<hr/>
+
+<div class="container" id="paper">
+    <div class="row">
+        <div class="span6">
+            <h3>Paper & Slides</h3>
+
+            <p><a href="https://dl.dropboxusercontent.com/u/75845627/buildsys_paper.pdf">Author version</a></p>
+
+            <p><a href="https://dl.dropboxusercontent.com/u/75845627/builldsys.pdf">Slides</a> presented at Buildsys
+                2013</p>
         </div>
-      </div>
 
+        <div class="span6">
+            <h3>Citation</h3>
 
-      <div class="divider"></div>
-        
-      <div class="divider"></div>
-      <!-- Screenshot items -->
-      <div id="features" class="row">
-        <div class="span4">
-          <img src="img/gear-icon.png" alt="">
-          <h3>Github repo</h3>
-          <p>Take a look at our <a href="https://github.com/nipunreddevil/Home_Deployment">Github repository</a> which contains all the issues we faced and how we resolved them.</p>
+            <p><a href="https://dl.dropboxusercontent.com/u/75845627/bib/2013_buildsys.bib">Bibtex</a></p>
+
         </div>
-	<div class="span4">
-          <img src="img/gear-icon.png" alt="">
-          <h3>What about DB schemas?</h3>
-          <p>Right <a href="https://github.com/nipunreddevil/Home_Deployment/tree/master/configuration/db_schemas">here</a>! Making it easy for you to replicate such deployments.</p>
-        </div>
-        <div class="span4">
-          <img src="img/monitoring-icon.png" alt="">
-          <h3>Starter IPython notebooks</h3>
-          <p>Why take trouble and code from scratch? Start with our <a href="http://nbviewer.ipython.org/github/nipunreddevil/Home_Deployment/tree/master/notebooks/">IPython notebooks</a> which illusrate common functionalities</p>
-        </div>
-        <div class="span4">
-          <img src="img/multi-files-icon.png" alt="">
-          <h3>Metadata</h3>
-          <p>Wouldn't it be useful if the <a href="https://github.com/nipunreddevil/Home_Deployment/wiki/Appliance-Metadata">rated power</a> of all appliances was known? Or which appliance is mapped to which <a href="https://github.com/nipunreddevil/Home_Deployment/blob/master/configuration/circuits.md">circuit</a>? Check out our <a href="https://github.com/nipunreddevil/Home_Deployment/tree/master/configuration">metadata</a> to know more.</p>
-        </div>
-<div class="span4">
-          <img src="img/multi-files-icon.png" alt="">
-          <h3>Installation instructions</h3>
-          <p>How to download the data set and quickly set up the environment</p>
-        </div>
-<div class="span4">
-          <img src="img/multi-files-icon.png" alt="">
-          <h3>Why so many sensors?</h3>
-          <p>Take a look <a href="https://github-camo.global.ssl.fastly.net/d30aa5a421c900d1b2b55e5f863a5be0cc024b90/68747470733a2f2f646c2e64726f70626f7875736572636f6e74656e742e636f6d2f752f37353834353632372f4465706c6f796d656e742f6c6162656c5f616e6e6f74617465642e706e67">here</a>! You will realize the additional value by summing up sensor data.</p>
-        </div>
-      </div>
-      <div class="divider"></div>
-      <!-- Download items -->
-      <div id="download" class="row">
 
-	<h3>Download</h3>
-  <ol> 
-  
-    <h4>Electricity</h4>
-    <a href="https://copy.com/PkCXGYeAsI6CKl1Q">CSV,</a>
-    <a href="https://copy.com/C2sIt1UfDx1mfPlC"> nilmtk HDF5</a>
-   <br/>
-    <h4>Ambient</h4>
-     <a href="https://copy.com/IcDq9UvLUZO8">SQL (100 MB)</a>
-     <a href="https://copy.com/DcJpjVVJPURS">,Compressed SQL (15 MB)</a>
-     <a href="https://copy.com/OKq4KfIEtJSs">, PIR CSV (12 MB)</a>
-     <a href="https://copy.com/dN3rFYo2M9Kz">, Light, Temp CSV (78 MB)</a>
-     <a href="https://copy.com/FGfrtGgDUCYO">, Compressed PIR CSV (3 MB) </a>
-     <a href="https://copy.com/E76CZIaTItIC"> , Compressed Light, Temp  CSV (14 MB)</a>
-     <br/>
-     
-         <h4>Water</h4>
-    <a href="https://copy.com/9BOOQLqqCs2M">SQL (615 MB)</a>
-    <a href="https://copy.com/zsq0qGqbpYlj">, Compressed SQL (90 MB)</a>
-    <a href="https://copy.com/xTw0NmVi0RVn">, CSV (554 MB)</a>
-    <a href="https://copy.com/PBYdqTYpf1HI">, Compressed CSV (75 MB)</a>
-    <br/>
+    </div>
 
- 
-
-    <h4>System information</h4>
-    <a href="https://copy.com/CtD7vXxGNt0k">SQL (123 MB)</a>
-    <a href="https://copy.com/OkbBcX0q8k4u">, Compressed SQL (18 MB)</a>
-    <a href="https://copy.com/xugH8DSAX2zh">, CSV (113 MB)</a>
-    <a href="https://copy.com/F3soKYcpcDrf">, Compressed CSV (18 MB)</a>
-    <br/>    
+</div>
 
 
-  
-    
-
-  
-<br/>
-<hr>
-
-	<!-- COMMENTED 
-        <ul class="inline">
-          <li><a href="#" class="btn btn-large btn-success">Try it FREE for 14 days</a></li>
-          <li><a href="#" class="btn btn-large btn-info">Buy it now</a></li>
-        </ul>
-       -->
-        
-      </div>
 
 
-	
- <div class="container" id="paper">
-          <div class="row">
+<!-- /container -->
+<!-- Footer items -->
+<footer>
+    <div class="container" id="contact">
+        <div class="row">
             <div class="span6">
-              <h3>Paper & Slides</h3>
-              <p><a href="https://dl.dropboxusercontent.com/u/75845627/buildsys_paper.pdf">Author version</a></p>
-		<p><a href="https://dl.dropboxusercontent.com/u/75845627/builldsys.pdf">Slides</a> presented at Buildsys 2013</p>
-            </div>
+                <h3>Acknowledgements</h3>
 
-            <div class="span6">
-              <h3>Citation</h3>
-              <p><a href="https://dl.dropboxusercontent.com/u/75845627/bib/2013_buildsys.bib">Bibtex</a></p>
-              
+                <p>We would like to thank NSF-DieTY, TCS R and D</p>
             </div>
-		
-          </div>
-          
-          </div>
+            <div class="span6">
+                <h3>Contact</h3>
+
+                <p><a href="http://nipunbatra.github.io"> Nipun Batra</a>, <a href="http://manojgulati.wordpress.com">
+                    Manoj Gulati</a> <br>
+                    PhD. scholars, <a href="http://iiitd.ac.in">IIIT Delhi</a></p>
+
+            </div>
         </div>
 
-    </div> <!-- /container -->
-    <!-- Footer items -->
-    <footer>
-        <div class="container" id="contact">
-          <div class="row">
-            <div class="span6">
-              <h3>Acknowledgements</h3>
-              <p>We would like to thank NSF-DieTY, TCS R and D</p>
-            </div>
-            <div class="span6">
-              <h3>Contact</h3>
-              <p><a href="http://nipunbatra.github.io"> Nipun Batra</a>, <a href="http://manojgulati.wordpress.com"> Manoj Gulati</a> <br>
-		PhD. scholars, <a href="http://iiitd.ac.in">IIIT Delhi</a></p>
-              
-            </div>
-          </div>
-          
-          </div>
-        </div>
-    </footer>
+    </div>
+    </div>
+</footer>
 
-    <!-- Le javascript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    <script>window.jQuery || document.write("<script src='js/jquery-1.8.3.min.js'>\x3C/script>")</script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.easing.1.3.js"></script>
-    <script type="text/javascript">
+<!-- Le javascript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script>window.jQuery || document.write("<script src='js/jquery-1.8.3.min.js'>\x3C/script>")</script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script type="text/javascript">
       $(document).ready(function() {
         $('a[href^="#"]').click(function(event) {
             var id = $(this).attr("href");
@@ -372,7 +426,9 @@
             event.preventDefault();
         });
       });
-    </script>
-  
 
-</body></html>
+</script>
+
+
+</body>
+</html>
