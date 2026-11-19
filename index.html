@@ -5,21 +5,483 @@
 <title>iAWE · Indian Dataset for Ambient Water and Energy</title>
 <meta name="description" content="One home. Multiple perspectives. Explore the official iAWE research dataset: electricity, water, ambient sensing and motion from a 2013 deployment in New Delhi.">
 <meta name="theme-color" content="#fffefa"><link rel="canonical" href="https://iawe.github.io/">
-<meta property="og:title" content="iAWE · A home, measured differently"><meta property="og:description" content="The Indian Dataset for Ambient Water and Energy. Official archive, documentation and original research."><meta property="og:type" content="website"><meta property="og:url" content="https://iawe.github.io/">
+<meta property="og:title" content="iAWE · A home, measured differently"><meta property="og:description" content="The Indian Dataset for Ambient Water and Energy. Official archive, documentation and original research."><meta property="og:image" content="https://iawe.github.io/img/water_meter.jpg"><meta property="og:type" content="website"><meta property="og:url" content="https://iawe.github.io/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23b52d24'/%3E%3Cpath d='M13 31 32 14 51 31M19 28v23h26V28M29 51V37h7v14' fill='none' stroke='%23fffefa' stroke-width='4'/%3E%3C/svg%3E">
 <style>
-:root{--paper:#fffefa;--ink:#222522;--muted:#60645e;--accent:#b52d24;--hover:#8f231c;--rule:#d4d6ce;--soft:#f0efe8;--water:#256579;--body:Arial,Helvetica,sans-serif;--mono:ui-monospace,SFMono-Regular,Consolas,monospace}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:100px}body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 var(--body);-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration-thickness:1px;text-underline-offset:5px}a:hover{color:var(--accent)}button{font:inherit;cursor:pointer}*:focus-visible{outline:3px solid var(--water);outline-offset:5px}::selection{background:#efc6bf;color:var(--ink)}.frame{width:min(1200px,calc(100% - 96px));margin:auto}.skip{position:fixed;top:-90px;left:20px;background:var(--ink);color:var(--paper);padding:12px;z-index:20}.skip:focus{top:10px}header{border-bottom:1px solid var(--rule);background:var(--paper);position:sticky;top:0;z-index:10}.nav{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:88px}.brand{display:flex;gap:16px;align-items:center;text-decoration:none}.wordmark{font-size:36px;font-weight:800;letter-spacing:-2px;line-height:1}.wordmark i{color:var(--accent);font-style:normal}.brand-note{font-size:12px;line-height:1.35;letter-spacing:.055em;text-transform:uppercase;border-left:1px solid var(--rule);padding-left:16px}nav{display:flex;gap:28px;align-items:center;font-size:14px;font-weight:600}nav a{text-decoration:none}nav .nav-download{border-bottom:2px solid var(--accent);padding:8px 0;color:var(--accent)}.eyebrow{font:600 12px/1.5 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:0 0 24px}.hero{display:grid;grid-template-columns:1.08fr 1fr;gap:40px;padding:76px 0 52px;align-items:center}.hero h1{font-size:clamp(54px,6.3vw,88px);line-height:.99;letter-spacing:-.065em;margin:0 0 28px;font-weight:750}.hero h1 span{color:var(--accent)}.intro{font-size:19px;line-height:1.6;max-width:44ch;color:var(--muted);margin:0 0 28px}.intro strong{color:var(--ink);font-weight:500}.actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center}.button{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:49px;padding:12px 20px;border:1px solid var(--ink);text-decoration:none;font-size:15px;font-weight:600;background:transparent;color:var(--ink)}.button.primary{background:var(--accent);border-color:var(--accent);color:var(--paper)}.button:hover{background:var(--ink);color:var(--paper)}.button.primary:hover{background:var(--hover);border-color:var(--hover)}.button svg{height:18px;width:18px;flex:none}.hero-meta{margin-top:22px;font:12px/1.6 var(--mono);color:var(--muted)}.hero-art{margin:0;position:relative}.hero-art svg{display:block;width:100%;height:auto}.hero-art figcaption{border-top:1px solid var(--rule);padding-top:12px;font:12px/1.5 var(--mono);color:var(--muted);display:flex;justify-content:space-between;gap:15px}.metrics{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--ink);border-bottom:1px solid var(--rule);margin-bottom:76px}.metric{padding:26px 20px 26px 0}.metric+.metric{border-left:1px solid var(--rule);padding-left:28px}.metric strong{display:block;font-size:35px;line-height:1.2;font-weight:500;letter-spacing:-.04em}.metric span{display:block;font-size:14px;color:var(--muted);margin-top:6px}.section{padding:64px 0;border-top:1px solid var(--rule)}.section-head{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-bottom:40px}.section h2{font-size:clamp(32px,3.4vw,47px);letter-spacing:-.045em;line-height:1.12;margin:0;max-width:18ch}.section-head p{color:var(--muted);margin:0;max-width:53ch}.section-head .eyebrow{margin-bottom:15px}.context-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:64px;align-items:start}.deployment{margin:0;background:var(--soft);border:1px solid var(--rule);padding:16px}.deployment img{width:100%;height:auto;display:block;mix-blend-mode:multiply}.deployment figcaption{font-size:13px;color:var(--muted);margin-top:15px}.observations{display:grid;gap:26px}.observation{border-top:1px solid var(--rule);padding-top:17px}.observation:first-child{border-color:var(--accent)}h3{font-size:21px;letter-spacing:-.025em;margin:0 0 7px;line-height:1.25}.observation p{margin:0;color:var(--muted);font-size:16px}.context-note{font-size:13px;margin:25px 0 0;color:var(--muted)}.stream-list{border-top:2px solid var(--ink)}.stream{display:grid;grid-template-columns:220px 1fr 200px;gap:30px;padding:27px 0;border-bottom:1px solid var(--rule);align-items:start}.stream h3{display:flex;gap:12px;align-items:center;font-size:23px}.stream-icon{width:26px;height:26px;color:var(--accent);flex:none}.stream.water .stream-icon{color:var(--water)}.stream p{margin:0;color:var(--muted);font-size:16px}.stream-stat{text-align:right;font:14px/1.65 var(--mono)}.stream-stat strong{display:block;font-weight:500;font-size:20px;letter-spacing:-.04em}.stream-stat span{color:var(--muted);font-size:12px}.stream small{font-size:13px;display:block;margin-top:6px;color:var(--muted)}.note{margin:24px 0 0;padding-left:18px;border-left:3px solid var(--accent);font-size:15px;max-width:87ch;color:var(--muted)}.download-section{background:var(--ink);color:var(--paper);padding:64px 0}.download-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:70px}.download-section .eyebrow{color:#b8bcb3}.download-section h2{font-size:clamp(38px,4vw,56px);line-height:1.05;letter-spacing:-.045em;margin:0 0 22px}.download-section p{color:#d0d3ca;font-size:17px}.download-section .button{margin:12px 0;color:var(--paper);border-color:#72776e}.download-section .button.primary{border-color:var(--accent)}.download-section a:not(.button):hover{color:#f2a79f}.download-meta{font:12px/1.8 var(--mono);color:#b8bcb3;margin-top:17px}.package{border-top:1px solid #72776e;margin-top:6px}.package-row{padding:17px 0;border-bottom:1px solid #50574e;display:grid;grid-template-columns:28px 1fr;gap:14px}.package-row svg{width:22px;height:22px;color:#c4c9bd;margin-top:3px}.package-row b{font-size:16px;font-weight:500;display:block}.package-row span{display:block;font-size:14px;color:#b8bcb3;margin-top:3px}.resources{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}.resource{border-top:2px solid var(--ink);padding:22px 0 0;text-decoration:none;display:block}.resource:hover h3{text-decoration:underline;text-underline-offset:5px}.resource h3{font-size:22px}.resource p{font-size:15px;color:var(--muted);margin:10px 0}.resource small{font:12px var(--mono);color:var(--accent)}.reading-grid{display:grid;grid-template-columns:.75fr 1.25fr;gap:64px}.faq details{border-bottom:1px solid var(--rule);padding:21px 0}.faq details:first-child{border-top:1px solid var(--ink)}summary{font-size:18px;font-weight:600;cursor:pointer;line-height:1.4;padding-right:16px}.faq details p{font-size:16px;color:var(--muted);margin:16px 0 0;max-width:67ch}.faq details a{color:var(--ink)}.faq-aside{margin-top:24px;color:var(--muted);font-size:16px;max-width:30ch}.paper{background:var(--soft)}.paper .section{border:0}.paper-title{font-size:clamp(29px,3vw,40px);letter-spacing:-.035em;line-height:1.15;max-width:27ch;margin:0 0 18px}.authors{font-size:16px;line-height:1.7;max-width:42ch}.citation-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px}.citation-box{border-top:1px solid var(--rule);padding-top:20px;margin-top:24px}.citation-box header{position:static;background:none;display:flex;justify-content:space-between;gap:20px;align-items:center;border:0}.citation-box h3{font-size:16px;margin:0}.copy{border:1px solid var(--rule);padding:5px 10px;font-size:13px;background:var(--paper);color:var(--ink)}.copy:hover{border-color:var(--accent);color:var(--accent)}pre{font:12px/1.7 var(--mono);overflow-x:auto;white-space:pre-wrap;overflow-wrap:anywhere;margin:15px 0 0;max-height:310px;padding:16px;background:var(--paper);border:1px solid var(--rule)}.citation-caption{font-size:14px;color:var(--muted)}footer{padding:48px 0 30px}.footer-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:48px;padding-bottom:42px}.footer-grid p{font-size:14px;color:var(--muted);margin:12px 0}.footer-grid h3{font-size:15px;margin-bottom:16px}.footer-grid a{display:inline-block}.footer-bottom{border-top:1px solid var(--rule);padding-top:20px;display:flex;justify-content:space-between;gap:20px;font:12px/1.6 var(--mono);color:var(--muted)}.footer-bottom a{color:var(--ink)}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-@media(min-width:1600px){.hero{padding-top:95px;padding-bottom:70px}}@media(max-width:1000px){.frame{width:calc(100% - 48px)}.brand-note{display:none}.hero{gap:20px}.hero h1{font-size:64px}.stream{grid-template-columns:180px 1fr 160px;gap:20px}.context-grid{gap:32px}.download-grid{gap:36px}}@media(max-width:720px){html{scroll-padding-top:130px}.frame{width:calc(100% - 36px)}.nav{min-height:100px;flex-wrap:wrap;gap:12px;padding:15px 0}.wordmark{font-size:30px}nav{gap:20px;font-size:13px;flex:1;justify-content:flex-end}.nav-download{display:none}.hero{grid-template-columns:1fr;padding:45px 0 34px;gap:30px}.hero h1{font-size:clamp(55px,12vw,76px)}.hero-art{max-width:520px;width:100%;justify-self:center}.intro{font-size:18px}.metrics{grid-template-columns:1fr 1fr;margin-bottom:40px}.metric{padding:20px 0}.metric+.metric{padding-left:20px}.metric:nth-child(3){border-left:0;padding-left:0;border-top:1px solid var(--rule)}.metric:nth-child(4){border-top:1px solid var(--rule)}.metric strong{font-size:30px}.metric span{font-size:13px}.section{padding:44px 0}.section-head,.context-grid,.download-grid,.reading-grid,.citation-grid{grid-template-columns:1fr;gap:24px}.section-head{margin-bottom:28px}.section h2{max-width:22ch}.context-grid{gap:30px}.stream{grid-template-columns:1fr 120px;gap:10px 15px}.stream h3{grid-column:1;font-size:22px}.stream p{grid-column:1;grid-row:2}.stream-stat{grid-column:2;grid-row:1/3;font-size:12px}.stream-stat strong{font-size:17px}.resources{grid-template-columns:1fr;gap:26px}.download-section{padding:44px 0}.download-grid{gap:30px}.footer-grid{grid-template-columns:1fr 1fr;gap:28px}.footer-grid>div:first-child{grid-column:1/-1}.footer-bottom{flex-direction:column;gap:12px}.eyebrow{margin-bottom:18px}.faq-aside{max-width:none}.citation-grid{gap:30px}.citation-box{margin-top:18px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}@media print{header,button,.actions{display:none}.frame{width:100%}.hero{padding-top:0}.section{break-inside:avoid}.download-section{background:white;color:black}.download-section p{color:black}}
+:root{--paper:#fffefa;--ink:#222522;--muted:#60645e;--accent:#b52d24;--hover:#8f231c;--rule:#d4d6ce;--soft:#f0efe8;--water:#256579;--body:Arial,Helvetica,sans-serif;--mono:ui-monospace,SFMono-Regular,Consolas,monospace}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:100px}body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 var(--body);-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration-thickness:1px;text-underline-offset:5px}a:hover{color:var(--accent)}button{font:inherit;cursor:pointer}*:focus-visible{outline:3px solid var(--water);outline-offset:5px}::selection{background:#efc6bf;color:var(--ink)}.frame{width:min(1200px,calc(100% - 96px));margin:auto}.skip{position:fixed;top:-90px;left:20px;background:var(--ink);color:var(--paper);padding:12px;z-index:20}.skip:focus{top:10px}header{border-bottom:1px solid var(--rule);background:var(--paper);position:sticky;top:0;z-index:10}.nav{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:88px}.brand{display:flex;gap:16px;align-items:center;text-decoration:none}.wordmark{font-size:36px;font-weight:800;letter-spacing:-2px;line-height:1}.wordmark i{color:var(--accent);font-style:normal}.brand-note{font-size:12px;line-height:1.35;letter-spacing:.055em;text-transform:uppercase;border-left:1px solid var(--rule);padding-left:16px}nav{display:flex;gap:28px;align-items:center;font-size:14px;font-weight:600}nav a{text-decoration:none}nav .nav-download{border-bottom:2px solid var(--accent);padding:8px 0;color:var(--accent)}.eyebrow{font:600 12px/1.5 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:0 0 24px}.hero{display:grid;grid-template-columns:1.08fr 1fr;gap:40px;padding:76px 0 52px;align-items:center}.hero h1{font-size:clamp(54px,6.3vw,88px);line-height:.99;letter-spacing:-.065em;margin:0 0 28px;font-weight:750}.hero h1 span{color:var(--accent)}.intro{font-size:19px;line-height:1.6;max-width:44ch;color:var(--muted);margin:0 0 28px}.intro strong{color:var(--ink);font-weight:500}.actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center}.button{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:49px;padding:12px 20px;border:1px solid var(--ink);text-decoration:none;font-size:15px;font-weight:600;background:transparent;color:var(--ink)}.button.primary{background:var(--accent);border-color:var(--accent);color:var(--paper)}.button:hover{background:var(--ink);color:var(--paper)}.button.primary:hover{background:var(--hover);border-color:var(--hover)}.button svg{height:18px;width:18px;flex:none}.hero-meta{margin-top:22px;font:12px/1.6 var(--mono);color:var(--muted)}.metrics{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--ink);border-bottom:1px solid var(--rule);margin-bottom:76px}.metric{padding:26px 20px 26px 0}.metric+.metric{border-left:1px solid var(--rule);padding-left:28px}.metric strong{display:block;font-size:35px;line-height:1.2;font-weight:500;letter-spacing:-.04em}.metric span{display:block;font-size:14px;color:var(--muted);margin-top:6px}.section{padding:64px 0;border-top:1px solid var(--rule)}.section-head{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-bottom:40px}.section h2{font-size:clamp(32px,3.4vw,47px);letter-spacing:-.045em;line-height:1.12;margin:0;max-width:18ch}.section-head p{color:var(--muted);margin:0;max-width:53ch}.section-head .eyebrow{margin-bottom:15px}.context-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:64px;align-items:start}.observations{display:grid;gap:26px}.observation{border-top:1px solid var(--rule);padding-top:17px}.observation:first-child{border-color:var(--accent)}h3{font-size:21px;letter-spacing:-.025em;margin:0 0 7px;line-height:1.25}.observation p{margin:0;color:var(--muted);font-size:16px}.context-note{font-size:13px;margin:25px 0 0;color:var(--muted)}.stream-list{border-top:2px solid var(--ink)}.stream{display:grid;grid-template-columns:220px 1fr 200px;gap:30px;padding:27px 0;border-bottom:1px solid var(--rule);align-items:start}.stream h3{display:flex;gap:12px;align-items:center;font-size:23px}.stream-icon{width:26px;height:26px;color:var(--accent);flex:none}.stream.water .stream-icon{color:var(--water)}.stream p{margin:0;color:var(--muted);font-size:16px}.stream-stat{text-align:right;font:14px/1.65 var(--mono)}.stream-stat strong{display:block;font-weight:500;font-size:20px;letter-spacing:-.04em}.stream-stat span{color:var(--muted);font-size:12px}.stream small{font-size:13px;display:block;margin-top:6px;color:var(--muted)}.note{margin:24px 0 0;padding-left:18px;border-left:3px solid var(--accent);font-size:15px;max-width:87ch;color:var(--muted)}.download-section{background:var(--ink);color:var(--paper);padding:64px 0}.download-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:70px}.download-section .eyebrow{color:#b8bcb3}.download-section h2{font-size:clamp(38px,4vw,56px);line-height:1.05;letter-spacing:-.045em;margin:0 0 22px}.download-section p{color:#d0d3ca;font-size:17px}.download-section .button{margin:12px 0;color:var(--paper);border-color:#72776e}.download-section .button.primary{border-color:var(--accent)}.download-section a:not(.button):hover{color:#f2a79f}.resources{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}.resource{border-top:2px solid var(--ink);padding:22px 0 0;text-decoration:none;display:block}.resource:hover h3{text-decoration:underline;text-underline-offset:5px}.resource h3{font-size:22px}.resource p{font-size:15px;color:var(--muted);margin:10px 0}.resource small{font:12px var(--mono);color:var(--accent)}.reading-grid{display:grid;grid-template-columns:.75fr 1.25fr;gap:64px}.faq details{border-bottom:1px solid var(--rule);padding:21px 0}.faq details:first-child{border-top:1px solid var(--ink)}summary{font-size:18px;font-weight:600;cursor:pointer;line-height:1.4;padding-right:16px}.faq details p{font-size:16px;color:var(--muted);margin:16px 0 0;max-width:67ch}.faq details a{color:var(--ink)}.faq-aside{margin-top:24px;color:var(--muted);font-size:16px;max-width:30ch}.paper{background:var(--soft)}.paper .section{border:0}.paper-title{font-size:clamp(29px,3vw,40px);letter-spacing:-.035em;line-height:1.15;max-width:27ch;margin:0 0 18px}.authors{font-size:16px;line-height:1.7;max-width:42ch}.citation-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px}.citation-box{border-top:1px solid var(--rule);padding-top:20px;margin-top:24px}.citation-box header{position:static;background:none;display:flex;justify-content:space-between;gap:20px;align-items:center;border:0}.citation-box h3{font-size:16px;margin:0}.copy{border:1px solid var(--rule);padding:5px 10px;font-size:13px;background:var(--paper);color:var(--ink)}.copy:hover{border-color:var(--accent);color:var(--accent)}pre{font:12px/1.7 var(--mono);overflow-x:auto;white-space:pre-wrap;overflow-wrap:anywhere;margin:15px 0 0;max-height:310px;padding:16px;background:var(--paper);border:1px solid var(--rule)}.citation-caption{font-size:14px;color:var(--muted)}footer{padding:48px 0 30px}.footer-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:48px;padding-bottom:42px}.footer-grid p{font-size:14px;color:var(--muted);margin:12px 0}.footer-grid h3{font-size:15px;margin-bottom:16px}.footer-grid a{display:inline-block}.footer-bottom{border-top:1px solid var(--rule);padding-top:20px;display:flex;justify-content:space-between;gap:20px;font:12px/1.6 var(--mono);color:var(--muted)}.footer-bottom a{color:var(--ink)}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(min-width:1600px){.hero{padding-top:95px;padding-bottom:70px}}@media(max-width:1000px){.frame{width:calc(100% - 48px)}.brand-note{display:none}.hero{gap:20px}.hero h1{font-size:64px}.stream{grid-template-columns:180px 1fr 160px;gap:20px}.context-grid{gap:32px}.download-grid{gap:36px}}@media(max-width:720px){html{scroll-padding-top:130px}.frame{width:calc(100% - 36px)}.nav{min-height:100px;flex-wrap:wrap;gap:12px;padding:15px 0}.wordmark{font-size:30px}nav{gap:20px;font-size:13px;flex:1;justify-content:flex-end}.hero{grid-template-columns:1fr;padding:45px 0 34px;gap:30px}.hero h1{font-size:clamp(55px,12vw,76px)}.intro{font-size:18px}.metrics{grid-template-columns:1fr 1fr;margin-bottom:40px}.metric{padding:20px 0}.metric+.metric{padding-left:20px}.metric:nth-child(3){border-left:0;padding-left:0;border-top:1px solid var(--rule)}.metric:nth-child(4){border-top:1px solid var(--rule)}.metric strong{font-size:30px}.metric span{font-size:13px}.section{padding:44px 0}.section-head,.context-grid,.download-grid,.reading-grid,.citation-grid{grid-template-columns:1fr;gap:24px}.section-head{margin-bottom:28px}.section h2{max-width:22ch}.context-grid{gap:30px}.stream{grid-template-columns:1fr 120px;gap:10px 15px}.stream h3{grid-column:1;font-size:22px}.stream p{grid-column:1;grid-row:2}.stream-stat{grid-column:2;grid-row:1/3;font-size:12px}.stream-stat strong{font-size:17px}.resources{grid-template-columns:1fr;gap:26px}.download-section{padding:44px 0}.download-grid{gap:30px}.footer-grid{grid-template-columns:1fr 1fr;gap:28px}.footer-grid>div:first-child{grid-column:1/-1}.footer-bottom{flex-direction:column;gap:12px}.eyebrow{margin-bottom:18px}.faq-aside{max-width:none}.citation-grid{gap:30px}.citation-box{margin-top:18px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}@media print{header,button,.actions{display:none}.frame{width:100%}.hero{padding-top:0}.section{break-inside:avoid}.download-section{background:white;color:black}.download-section p{color:black}}
+.nav {
+  min-height: 72px;
+}
+nav .nav-download {
+  border: 1px solid var(--accent);
+  padding: 8px 14px;
+  color: var(--paper);
+  background: var(--accent);
+}
+nav .nav-download:hover {
+  background: var(--hover);
+  border-color: var(--hover);
+}
+.hero {
+  grid-template-columns: .88fr 1.12fr;
+  gap: clamp(32px, 5vw, 80px);
+  padding: 64px 0 48px;
+}
+.hero h1 {
+  max-width: 9ch;
+  font-size: clamp(62px, 6.2vw, 91px);
+  line-height: .96;
+  text-wrap: balance;
+}
+.hero h1 span {
+  display: block;
+}
+.hero-meta {
+  margin-bottom: 0;
+}
+.gallery {
+  min-width: 0;
+  background: var(--soft);
+  border: 1px solid var(--rule);
+}
+.gallery-slide {
+  margin: 0;
+}
+.gallery-image {
+  display: block;
+  aspect-ratio: 8 / 5;
+  background: #d9ded5;
+  touch-action: pan-y pinch-zoom;
+}
+.gallery-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.gallery-diagram {
+  padding: clamp(8px, 2vw, 25px);
+}
+.gallery-diagram img {
+  object-fit: contain;
+}
+.gallery-slide figcaption {
+  display: grid;
+  min-height: 82px;
+  align-content: center;
+  gap: 3px;
+  padding: 11px 17px;
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--muted);
+}
+.gallery-slide figcaption strong {
+  font-size: 16px;
+  color: var(--ink);
+}
+.gallery-toolbar:not([hidden]) {
+  display: flex;
+}
+.gallery-toolbar {
+  align-items: center;
+  justify-content: space-between;
+  padding: 7px 9px 7px 17px;
+  gap: 8px;
+  border-top: 1px solid var(--rule);
+}
+.gallery-label,
+.gallery-count {
+  font: 12px/1.4 var(--mono);
+  color: var(--muted);
+}
+.gallery-controls {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.gallery-count {
+  margin-right: 4px;
+  white-space: nowrap;
+}
+.gallery-button {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  font-size: 20px;
+  background: var(--paper);
+  color: var(--ink);
+  border: 1px solid var(--rule);
+}
+.gallery-button:hover {
+  color: var(--paper);
+  background: var(--ink);
+  border-color: var(--ink);
+}
+.metrics {
+  margin-bottom: 0;
+}
+.download-section {
+  padding: 54px 0 60px;
+}
+.download-section :focus-visible {
+  outline-color: #f5b3a8;
+}
+.download-heading,
+.download-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+  gap: 48px;
+}
+.download-heading {
+  align-items: end;
+  margin-bottom: 30px;
+}
+.download-heading h2,
+.download-heading p:last-child {
+  margin: 0;
+}
+.download-heading .eyebrow {
+  margin-bottom: 9px;
+}
+.file-list {
+  padding: 0;
+  margin: 0 0 15px;
+  list-style: none;
+  border-top: 1px solid #72776e;
+}
+.file-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 9px;
+  border-bottom: 1px solid #5a6055;
+  text-decoration: none;
+}
+.file-link:hover {
+  background: #30382f;
+}
+.file-link strong,
+.file-link small {
+  display: block;
+}
+.file-link strong {
+  font-size: 16px;
+}
+.file-link small {
+  color: #d0d3ca;
+  font-size: 13px;
+}
+.file-size {
+  font: 13px/1.4 var(--mono);
+  white-space: nowrap;
+}
+.file-size span {
+  margin-left: 5px;
+}
+.all-files {
+  display: block;
+  width: fit-content;
+  padding: 7px 9px;
+  font-size: 14px;
+}
+.quickstart {
+  align-self: start;
+  padding: clamp(18px, 2.5vw, 32px);
+  background: var(--soft);
+  color: var(--ink);
+  border-top: 3px solid #d55a48;
+}
+.quickstart .eyebrow,
+.quickstart p {
+  color: var(--muted);
+}
+.quickstart .eyebrow {
+  margin: 0 0 8px;
+}
+.quickstart h3 {
+  font-size: clamp(24px, 2.6vw, 34px);
+}
+.quickstart p {
+  margin: 12px 0;
+  font-size: 15px;
+}
+.quickstart .button {
+  margin: 5px 0 14px;
+}
+.quickstart a:not(.button):hover {
+  color: var(--accent);
+}
+.quickstart details {
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  padding: 12px 0;
+}
+.quickstart summary {
+  padding: 2px 0;
+  font-size: 15px;
+}
+.quickstart .quickstart-note {
+  margin: 14px 0 0;
+  font-size: 14px;
+}
+.example-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font: 12px var(--mono);
+  color: var(--muted);
+}
+.quickstart pre {
+  max-height: none;
+  white-space: pre;
+  overflow-wrap: normal;
+}
+.context-grid {
+  grid-template-columns: 1fr 1fr;
+}
+.context-note {
+  margin-top: 18px;
+}
+@media (max-width: 1000px) {
+  .hero {
+    grid-template-columns: .92fr 1.08fr;
+    gap: 26px;
+  }
+  .hero h1 {
+    font-size: clamp(46px, 7vw, 68px);
+  }
+  .download-heading, .download-grid {
+    gap: 28px;
+  }
+}
+@media (max-width: 720px) {
+  html {
+    scroll-padding-top: 78px;
+  }
+  .nav {
+    min-height: 64px;
+    padding: 9px 0;
+    gap: 8px;
+    flex-wrap: nowrap;
+  }
+  nav {
+    gap: 12px;
+  }
+  nav .nav-download {
+    padding: 7px 10px;
+    white-space: nowrap;
+  }
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 30px 0 28px;
+  }
+  .hero h1 {
+    font-size: clamp(51px, 10.6vw, 74px);
+    margin-bottom: 17px;
+  }
+  .hero .eyebrow,
+  .hero .intro {
+    margin-bottom: 16px;
+  }
+  .hero-meta {
+    margin-top: 14px;
+  }
+  .hero .button {
+    padding-inline: 10px;
+  }
+  .gallery-slide figcaption {
+    min-height: 84px;
+  }
+  .gallery-image {
+    aspect-ratio: 16 / 10;
+  }
+  .download-section {
+    padding: 38px 0 40px;
+  }
+  .download-heading, .download-grid, .context-grid {
+    grid-template-columns: 1fr;
+  }
+  .download-heading {
+    gap: 10px;
+    margin-bottom: 22px;
+  }
+  .file-link, .all-files {
+    padding-inline: 4px;
+  }
+}
+@media (max-width: 360px) {
+  nav {
+    gap: 8px;
+  }
+}
+@media print {
+  .download-section .quickstart p {
+    color: black;
+  }
+}
 </style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<header><div class="frame nav"><a class="brand" href="#myCarousel" aria-label="iAWE home"><span class="wordmark"><i>i</i>AWE</span><span class="brand-note">Ambient<br>Water &amp; Energy</span></a><nav aria-label="Main navigation"><a href="#about">The dataset</a><a href="#features">Explore</a><a href="#paper">Paper &amp; citation</a><a class="nav-download" href="#download">Get the data</a></nav></div></header>
+<header><div class="frame nav"><a class="brand" href="#myCarousel" aria-label="iAWE home"><span class="wordmark"><i>i</i>AWE</span><span class="brand-note">Ambient<br>Water &amp; Energy</span></a><nav aria-label="Main navigation"><a href="#about">Deployment</a><a class="nav-cite" href="#paper">Cite</a><a class="nav-download" href="#download">Get the data</a></nav></div></header>
 <main id="main">
-<div class="frame" id="myCarousel"><section class="hero" aria-labelledby="hero-title"><div><p class="eyebrow">New Delhi, India · Field deployment, 2013</p><h1 id="hero-title">A home,<br>measured<br><span>differently.</span></h1><p class="intro"><strong>Indian Dataset for Ambient Water and Energy.</strong> Electricity, water and everyday activity, observed together in one real home.</p><div class="actions"><a class="button primary" href="https://doi.org/10.5281/zenodo.24361973"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5"/></svg>Download official archive</a><a class="button" href="#paper">Read the paper</a></div><p class="hero-meta">OPEN RESEARCH DATA · VERSION 1.0.0 · CC BY 4.0</p></div>
-<figure class="hero-art"><svg viewBox="0 0 560 545" role="img" aria-labelledby="house-title house-desc"><title id="house-title">One home, connected measurements</title><desc id="house-desc">Illustrative cutaway of a three-storey home, with separate paths for electricity, water and ambient sensing. This is a schematic, not a floor plan or measured data plot.</desc><defs><pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r=".8" fill="#c4c7bd"/></pattern></defs><rect x="10" y="10" width="540" height="510" fill="url(#grid)"/><path d="M142 149 320 61 470 137 291 226Z" fill="#e9e7df" stroke="#222522" stroke-width="1.5"/><path d="M142 149v270l149 77V226Z" fill="#fffefa" stroke="#222522" stroke-width="1.5"/><path d="M291 226 470 137v270l-179 89Z" fill="#f0efe8" stroke="#222522" stroke-width="1.5"/><path d="m142 239 149 77 179-89M142 329l149 77 179-89" stroke="#222522" stroke-width="1.5" fill="none"/><path d="m162 184 54 28v48l-54-28Zm0 90 54 28v48l-54-28Zm0 90 54 28v48l-54-28Z" stroke="#a5aaa0" fill="#f0efe8"/><path d="m318 254 57-28v43l-57 28Zm0 90 57-28v43l-57 28Zm0 90 57-28v43l-57 28Z" fill="#fffefa" stroke="#a5aaa0"/><path d="M252 132v331M252 221l-23-12m23 102-23-12m23 102-23-12" stroke="#b52d24" stroke-width="4" fill="none"/><path d="M423 119v309l-40 21M423 264l-28 14m28 76-28 14" stroke="#256579" stroke-width="4" fill="none"/><path d="m391 108 32-16 33 16v28l-33 16-32-16Z" fill="#dce8e9" stroke="#256579" stroke-width="1.5"/><path d="m391 108 32 16 33-16m-33 16v28" stroke="#256579" fill="none"/><circle cx="252" cy="221" r="7" fill="#b52d24" stroke="#fffefa" stroke-width="2"/><circle cx="252" cy="311" r="7" fill="#b52d24" stroke="#fffefa" stroke-width="2"/><circle cx="252" cy="401" r="7" fill="#b52d24" stroke="#fffefa" stroke-width="2"/><circle cx="423" cy="354" r="7" fill="#256579" stroke="#fffefa" stroke-width="2"/><rect x="218" y="141" width="20" height="25" fill="#fffefa" stroke="#b52d24" stroke-width="2" transform="skewY(0)"/><path d="m230 145-7 9h7l-7 9" fill="none" stroke="#b52d24" stroke-width="1.7"/><path d="M182 352v-7m-9 4-4-4m17 5 4-3" stroke="#60645e" stroke-width="1.5"/><circle cx="181" cy="361" r="5" fill="#60645e"/><path d="M240 153H77v-41M423 196h89M181 361H63v43" fill="none" stroke="#60645e" stroke-width="1"/><g font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#222522"><text x="27" y="76" font-weight="700">ELECTRICITY</text><text x="27" y="97" fill="#60645e">Meter to appliance</text><text x="425" y="223" font-weight="700">WATER</text><text x="425" y="243" fill="#60645e">Inlet &amp; outlet</text><text x="25" y="429" font-weight="700">AMBIENT</text><text x="25" y="449" fill="#60645e">Light · temperature</text><text x="25" y="469" fill="#60645e">Motion events</text></g><path d="M48 506h464" stroke="#222522"/><path d="M48 501v10m464-10v10" stroke="#222522"/></svg><figcaption><span>ONE HOME. MULTIPLE PERSPECTIVES.</span><span>Illustrative schematic</span></figcaption></figure></section>
+<div class="frame" id="myCarousel">
+  <section class="hero" aria-labelledby="hero-title">
+    <div>
+      <p class="eyebrow">New Delhi, India · 2013 field deployment</p>
+      <h1 id="hero-title">A home, measured <span>differently.</span></h1>
+      <p class="intro"><strong>Indian Dataset for Ambient Water and Energy.</strong>
+        Explore electricity, water, light, temperature and motion from a 73-day study of one home.</p>
+      <div class="actions">
+        <a class="button primary" href="#download">Download the data <span aria-hidden="true">↓</span></a>
+        <a class="button" href="#quickstart">Try the quickstart</a>
+      </div>
+      <p class="hero-meta">Open research data · v1.0.0 · CC BY 4.0</p>
+    </div>
+    <div class="gallery" role="group" aria-roledescription="carousel" aria-label="Original iAWE deployment gallery">
+      <div class="gallery-slides" id="deployment-slides">
+        <figure class="gallery-slide">
+          <div class="gallery-image">
+            <img src="img/water_meter.jpg" width="4320" height="2432" fetchpriority="high"
+              alt="A round water meter mounted to a blue pipe in the New Delhi home">
+          </div>
+          <figcaption><strong>Water meter</strong><span>Pulse readings tracked water supply and use.</span></figcaption>
+        </figure>
+        <figure class="gallery-slide" hidden>
+          <div class="gallery-image">
+            <img src="img/meter.jpg" width="4320" height="2432" loading="lazy" decoding="async"
+              alt="A digital electricity meter wired into a household electrical panel">
+          </div>
+          <figcaption><strong>Whole-home electricity</strong><span>A smart meter recorded supply and household demand.</span></figcaption>
+        </figure>
+        <figure class="gallery-slide" hidden>
+          <div class="gallery-image">
+            <img src="img/ambient.jpg" width="4320" height="2432" loading="lazy" decoding="async"
+              alt="An ambient sensor, with a small enclosure and visible wires, on a table">
+          </div>
+          <figcaption><strong>Ambient sensing</strong><span>Indoor nodes tracked conditions such as light and temperature.</span></figcaption>
+        </figure>
+        <figure class="gallery-slide" hidden>
+          <div class="gallery-image">
+            <img src="img/jplug.jpg" width="4320" height="2432" loading="lazy" decoding="async"
+              alt="A plug-in energy monitor connected to a household appliance">
+          </div>
+          <figcaption><strong>Appliance electricity</strong><span>Plug-in meters captured demand from individual appliances.</span></figcaption>
+        </figure>
+        <figure class="gallery-slide" hidden>
+          <div class="gallery-image">
+            <img src="img/ct.png" width="436" height="253" loading="lazy" decoding="async"
+              alt="Blue current transformer clamps around wires in a circuit breaker panel">
+          </div>
+          <figcaption><strong>Circuit electricity</strong><span>Current transformers measured individual circuits at the panel.</span></figcaption>
+        </figure>
+        <figure class="gallery-slide" hidden>
+          <a class="gallery-image gallery-diagram" href="img/overall_deployment.jpg"
+            aria-label="Open the original deployment map at full size">
+            <img src="img/overall_deployment.jpg" width="1323" height="697" loading="lazy" decoding="async"
+              alt="Original diagram mapping sensor types and placement across the home’s three floors">
+          </a>
+          <figcaption><strong>Deployment map</strong><span>Open the original sensor placement diagram at full size.</span></figcaption>
+        </figure>
+      </div>
+      <div class="gallery-toolbar" hidden>
+        <span class="gallery-label">Original deployment</span>
+        <div class="gallery-controls">
+          <span class="gallery-count" aria-hidden="true">1 / 6</span>
+          <button class="gallery-button" type="button" data-step="-1" aria-label="Previous slide" aria-controls="deployment-slides">←</button>
+          <button class="gallery-button" type="button" data-step="1" aria-label="Next slide" aria-controls="deployment-slides">→</button>
+        </div>
+      </div>
+      <p class="sr-only gallery-status" role="status"></p>
+    </div>
+  </section>
 <div class="metrics" aria-label="Deployment at a glance"><div class="metric"><strong>73 days</strong><span>Reported deployment period*</span></div><div class="metric"><strong>33 sensors</strong><span>Original multimodal deployment</span></div><div class="metric"><strong>12 meters</strong><span>In the electricity archive</span></div><div class="metric"><strong>One home</strong><span>New Delhi, India</span></div></div>
-<section id="about" class="section"><div class="section-head"><div><p class="eyebrow">The setting matters</p><h2>Real homes.<br>Real interruptions.</h2></div><p>Collected in a three-storey home during the summer of 2013, iAWE connects energy use with the conditions around it. The deployment captures an Indian household with intermittent electricity and water supply, voltage variation and imperfect connectivity.</p></div><div class="context-grid"><figure class="deployment"><img src="https://iawe.github.io/img/overall_deployment.jpg" width="1200" height="700" loading="lazy" alt="Original iAWE deployment overview showing the home's sensing setup"><figcaption>The original deployment overview. See the <a href="https://github.com/nipunbatra/Home_Deployment">Home_Deployment repository</a> for instrumentation and collection notes.</figcaption></figure><div class="observations"><div class="observation"><h3>Beyond a single power meter</h3><p>The original deployment measured electricity at household, circuit and appliance levels, alongside water and ambient conditions.</p></div><div class="observation"><h3>Infrastructure is part of the story</h3><p>Power outages, overhead water storage and acquisition gaps make this a dataset of real operating conditions, not an idealized laboratory.</p></div><div class="observation"><h3>Context for better questions</h3><p>Study appliance-level demand, connect motion and ambient observations, or examine the reliability of a long-running sensing deployment.</p></div></div></div><p class="context-note">*73 days describes the deployment reported in the paper, not uniform coverage of every stream. Some electricity records extend into September 2013.</p></section>
+</div>
+<section id="download" class="download-section" aria-labelledby="download-title">
+  <div class="frame">
+    <div class="download-heading">
+      <div>
+        <p class="eyebrow">Official release · v1.0.0</p>
+        <h2 id="download-title">Download iAWE</h2>
+      </div>
+      <p>Choose the file you need. The <a href="https://doi.org/10.5281/zenodo.24361973">Zenodo record</a> has all files, including
+        annotations, diagnostics and alternate exports. Data are
+        <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</p>
+    </div>
+    <div class="download-grid">
+      <div>
+        <ul class="file-list" aria-label="Dataset downloads">
+          <li><a class="file-link" href="https://zenodo.org/api/records/24361973/files/electricity.tar.gz/content" aria-label="Download Electricity, 439 MB">
+            <span><strong>Electricity</strong><small>Original CSVs and appliance labels</small></span>
+            <span class="file-size">439 MB <span aria-hidden="true">↓</span></span>
+          </a></li>
+          <li><a class="file-link" href="https://zenodo.org/api/records/24361973/files/water_meter.csv.gz/content" aria-label="Download Water pulses, 79 MB">
+            <span><strong>Water pulses</strong><small>Original meter readings · CSV</small></span>
+            <span class="file-size">79 MB <span aria-hidden="true">↓</span></span>
+          </a></li>
+          <li><a class="file-link" href="https://zenodo.org/api/records/24361973/files/light_temp.csv.gz/content" aria-label="Download Light &amp; temperature, 14 MB">
+            <span><strong>Light &amp; temperature</strong><small>Original indoor sensor readings · CSV</small></span>
+            <span class="file-size">14 MB <span aria-hidden="true">↓</span></span>
+          </a></li>
+          <li><a class="file-link" href="https://zenodo.org/api/records/24361973/files/pir.csv.gz/content" aria-label="Download Motion, 2.4 MB">
+            <span><strong>Motion</strong><small>Passive infrared detections · CSV</small></span>
+            <span class="file-size">2.4 MB <span aria-hidden="true">↓</span></span>
+          </a></li>
+          <li><a class="file-link" href="https://zenodo.org/api/records/24361973/files/iawe.h5/content" aria-label="Download Electricity · legacy HDF5, 428 MB">
+            <span><strong>Electricity · legacy HDF5</strong><small>Historical NILMTK file</small></span>
+            <span class="file-size">428 MB <span aria-hidden="true">↓</span></span>
+          </a></li>
+        </ul>
+        <a class="all-files" href="https://doi.org/10.5281/zenodo.24361973">Browse all files on Zenodo <span aria-hidden="true">↗</span></a>
+        <a class="all-files" href="https://zenodo.org/api/records/24361973/files/iawe-documentation.tar.gz/content">Download documentation and checksums <span aria-hidden="true">↓</span></a>
+      </div>
+      <div class="quickstart" id="quickstart">
+        <p class="eyebrow">Quickstart</p>
+        <h3>Count motion events by hour</h3>
+        <p>Start with the smallest of the main sensor files. The example counts recorded detections across sensor nodes by local hour in 2013.</p>
+        <a class="button primary" href="https://zenodo.org/api/records/24361973/files/pir.csv.gz/content">Download motion CSV · 2.4 MB <span aria-hidden="true">↓</span></a>
+        <details>
+          <summary>Show the Python example</summary>
+          <p>Save <code>pir.csv.gz</code> next to the script and run it with Python 3. Leave the file compressed.</p>
+          <div class="example-heading"><span>Python 3</span><button type="button" class="copy" data-copy="motion-example">Copy code</button></div>
+          <pre id="motion-example"><code>from collections import Counter
+from datetime import datetime, timedelta, timezone
+import csv
+import gzip
+
+ist = timezone(timedelta(hours=5, minutes=30))
+start = datetime(2013, 1, 1, tzinfo=ist).timestamp()
+end = datetime(2014, 1, 1, tzinfo=ist).timestamp()
+counts = Counter()
+
+with gzip.open(&quot;pir.csv.gz&quot;, &quot;rt&quot;, newline=&quot;&quot;) as source:
+    for row in csv.DictReader(source):
+        timestamp = int(row[&quot;timestamp&quot;])
+        if start &lt;= timestamp &lt; end:
+            hour = datetime.fromtimestamp(timestamp, ist).hour
+            counts[hour] += 1
+
+for hour in range(24):
+    print(f&quot;{hour:02d}:00  {counts[hour]}&quot;)</code></pre>
+        </details>
+        <p class="quickstart-note">Working with electricity? Start with the CSVs and use the
+          <a href="https://zenodo.org/api/records/24361973/files/iawe-documentation.tar.gz/content">release guide</a> for meter labels and mains alignment.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="frame">
+<section id="about" class="section"><div class="section-head"><div><p class="eyebrow">The setting matters</p><h2>Real homes.<br>Real interruptions.</h2></div><p>Collected in a three-storey home during the summer of 2013, iAWE connects energy use with the conditions around it. The deployment captures an Indian household with intermittent electricity and water supply, voltage variation and imperfect connectivity.</p></div><div class="context-grid"><div class="observation">
+  <h3>How the home was instrumented</h3>
+  <p>See the wiring, sensor placement and data collection notes in the original deployment resources.</p>
+  <p class="context-note"><a href="img/overall_deployment.jpg">View the deployment map</a> ·
+    <a href="https://github.com/nipunbatra/Home_Deployment">See the collection software</a></p>
+</div><div class="observations"><div class="observation"><h3>Beyond a single power meter</h3><p>The original deployment measured electricity at household, circuit and appliance levels, alongside water and ambient conditions.</p></div><div class="observation"><h3>Infrastructure is part of the story</h3><p>Power outages, overhead water storage and acquisition gaps make this a dataset of real operating conditions, not an idealized laboratory.</p></div><div class="observation"><h3>Context for better questions</h3><p>Study appliance-level demand, connect motion and ambient observations, or examine the reliability of a long-running sensing deployment.</p></div></div></div><p class="context-note">*73 days describes the deployment reported in the paper, not uniform coverage of every stream. Some electricity records extend into September 2013.</p></section>
 <section id="features" class="section"><div class="section-head"><div><p class="eyebrow">Inside the archive</p><h2>Different streams.<br>A shared setting.</h2></div><p>Start with the modality your question needs. The official release preserves original electricity files and provides documented CSV exports for the other recovered streams.</p></div><div class="stream-list">
 <article class="stream"><h3><svg class="stream-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m14 2-9 12h6l-1 8 9-13h-6Z"/></svg>Electricity</h3><p>Original meter CSVs and appliance labels, plus the historical NILMTK HDF5 representation. Power, voltage and other electrical measurements depend on the meter.<small>electricity.tar.gz · iawe.h5</small></p><div class="stream-stat"><strong>12 meters</strong><span>CSV + legacy HDF5</span></div></article>
 <article class="stream water"><h3><svg class="stream-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C9 7 5 11 5 15a7 7 0 0 0 14 0c0-4-4-8-7-13Z"/></svg>Water</h3><p>Pulse-state records from the water-meter system. These are not calibrated volume or flow-rate measurements.<small>Legacy CSV and SQL-derived alternatives</small></p><div class="stream-stat"><strong>32,250,081</strong><span>rows per source variant</span></div></article>
@@ -27,7 +489,6 @@
 <article class="stream"><h3><svg class="stream-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="5" cy="12" r="2"/><path d="M10 7a7 7 0 0 1 0 10M14 3a12 12 0 0 1 0 18"/></svg>Motion</h3><p>PIR detections, recorded as a timestamp and node ID. An event indicates detected motion, not continuous occupancy.</p><div class="stream-stat"><strong>966,798</strong><span>motion records</span></div></article>
 <article class="stream"><h3><svg class="stream-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12h4l3-7 5 14 4-7h4"/></svg>Diagnostics</h3><p>System and acquisition conditions, including client and server times. Device IDs and types are replaced with stable pseudonyms.</p><div class="stream-stat"><strong>2,671,802</strong><span>diagnostic records</span></div></article>
 <article class="stream"><h3><svg class="stream-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 3h14v18H5ZM8 8h8m-8 4h8m-8 4h5"/></svg>Annotations</h3><p>A controlled-event trace and four original companion streams. The original repository documents 101 controlled electrical events on August 4, 2013.<small>Includes selected companion files, not every original public file</small></p><div class="stream-stat"><strong>Selected traces</strong><span>With provenance notes</span></div></article></div><p class="note">The ambient and water source variants have equal row counts but are not verified identical. They are alternatives, not additional observations to concatenate. Raw electricity and legacy HDF5 also differ in row counts.</p></section></div>
-<section id="download" class="download-section"><div class="frame download-grid"><div><p class="eyebrow">Official archive · v1.0.0</p><h2>Ready for your<br>next question.</h2><p>Get the data, checksums and documentation from the versioned Zenodo record. No institutional sign-in or legacy file-sharing link needed.</p><a class="button primary" href="https://doi.org/10.5281/zenodo.24361973">Download official archive</a><div class="download-meta">DOI: 10.5281/zenodo.24361973<br>Released under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0</a></div></div><div class="package"><div class="package-row"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 5h7l2 3h9v13H3Z"/></svg><div><b>Ten data files</b><span>Original electricity archives, documented CSV streams, controlled-event trace and annotation companions.</span></div></div><div class="package-row"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M5 2h10l4 4v16H5Zm4 7h6m-6 4h6m-6 4h6"/></svg><div><b>A guide to what you’re downloading</b><span>README, quickstart, data dictionary, provenance and known data-quality limitations.</span></div></div><div class="package-row"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 2 3 6v7c0 5 9 9 9 9s9-4 9-9V6Z"/><path d="m7 12 3 3 7-7"/></svg><div><b>Verify and cite your version</b><span>SHA-256 checksums and BibTeX for the dataset and original paper.</span></div></div></div></div></section>
 <div class="frame"><section class="section" aria-labelledby="resources-title"><div class="section-head"><div><p class="eyebrow">Research resources</p><h2 id="resources-title">Start with the context.</h2></div><p>The archive is one part of the record. Explore the original instrumentation, sensor mappings and analysis notebooks before choosing your preprocessing.</p></div><div class="resources"><a class="resource" href="https://github.com/nipunbatra/Home_Deployment"><small>CODE &amp; COLLECTION</small><h3>Home_Deployment</h3><p>Original sensor software, deployment issues and the decisions behind the measurements.</p></a><a class="resource" href="https://github.com/nipunbatra/Home_Deployment/wiki/Appliance-Metadata"><small>METADATA</small><h3>Know the appliances</h3><p>The published appliance inventory. Archive meter labels and inventory IDs are different identifier systems.</p></a><a class="resource" href="https://github.com/nipunbatra/Home_Deployment/tree/master/notebooks"><small>ANALYSIS</small><h3>Original notebooks</h3><p>Historical examples for examining temperatures, electricity and time ranges. Adapt their dependencies and assumptions.</p></a></div><p class="context-note">Also explore: <a href="https://github.com/nipunbatra/Home_Deployment/tree/master/configuration/db_schemas">Database schemas</a> · <a href="https://github.com/nipunbatra/Home_Deployment/blob/master/configuration/circuits.md">Circuit mappings</a> · <a href="https://github.com/nipunbatra/Home_Deployment/blob/master/dataset/Readme.md">Original annotations</a> · <a href="https://github.com/nilmtk/nilmtk/tree/master/nilmtk/dataset_converters/iawe/metadata">NILMTK metadata</a></p></section>
 <section id="faq" class="section reading-grid"><div><p class="eyebrow">Before you analyze</p><h2>A few things<br>worth knowing.</h2><p class="faq-aside">Good results begin with explicit assumptions. The release documentation records the differences that matter.</p><a href="https://gist.github.com/nipunbatra/52ac6e5ba32e7260c4e9">Read the original author FAQ</a></div><div class="faq"><details open><summary>Does every sensor cover all 73 days?</summary><p>No. Coverage, sampling and missingness vary by stream. The 73-day figure describes the original deployment. Some raw electricity records extend into September. Use the release data dictionary and inspect the actual timestamps for your chosen channels.</p></details><details><summary>Which electricity format should I use?</summary><p>Use original CSVs when you need raw timestamps and control over missing-data treatment. The historical HDF5 is a separate legacy representation with different row counts. For whole-home active power, deduplicate and align mains meters 1 and 2 before summing. A missing mains channel does not yield a valid whole-home observation.</p></details><details><summary>How do I interpret timestamps?</summary><p>Sensor timestamps are Unix seconds, representing UTC instants. Parse as UTC, then convert to Asia/Kolkata for local time. Water timestamps can be fractional. Negative and implausible legacy values remain in the archive. The controlled electrical annotation table instead uses IST clock times.</p></details><details><summary>Can I turn water records directly into litres?</summary><p>No. The records contain pulse states and acquisition anomalies, not calibrated volume. Validate timestamps, transitions and repeated readings. A complete fixture-level calibration table was not verified among the recovered artifacts.</p></details><details><summary>Is this every original deployment artifact?</summary><p>The release contains the cleared recovered research files, not an assertion that every historical artifact survives. Selected annotations are included. The separate original jPlug companion, which contains device identifiers, is not bundled; appliance measurements remain in the primary electricity archive. Diagnostics use pseudonymous device IDs.</p></details><details><summary>What should I cite?</summary><p>Cite both the original BuildSys 2013 paper and the version-specific dataset DOI below. If you use NILMTK software, cite the <a href="https://doi.org/10.1145/2602044.2602051">NILMTK paper</a> as well. Dataset files are CC BY 4.0; linked software and the original paper retain their separate terms.</p></details></div></section></div>
 <section id="paper" class="paper"><div class="frame section"><p class="eyebrow">The research behind the data</p><div class="citation-grid"><div><h2 class="paper-title">It’s Different: Insights into Home Energy Consumption in India</h2><p class="authors">Nipun Batra, Manoj Gulati, Amarjeet Singh<br>and Mani B. Srivastava</p><p class="citation-caption">BuildSys 2013 · 5th ACM Workshop on Embedded Systems for Energy-Efficient Buildings</p><div class="actions"><a class="button" href="https://nipunbatra.github.io/lab/papers/2013/buildsys_2013.pdf">Read author PDF</a><a href="https://doi.org/10.1145/2528282.2528293">Paper DOI</a></div><div class="citation-box"><header><h3>Original paper</h3><button class="copy" data-copy="paper-bib">Copy BibTeX</button></header><pre id="paper-bib">@inproceedings{batra2013different,
@@ -49,6 +510,75 @@
 </main>
 <footer id="contact"><div class="frame"><div class="footer-grid"><div><a class="brand" href="#myCarousel"><span class="wordmark"><i>i</i>AWE</span></a><p>Indian Dataset for Ambient Water and Energy.<br>Collected in New Delhi. Built for research.</p><a href="https://sustainability-lab.github.io/">Sustainability Lab · IIT Gandhinagar</a></div><div><h3>People &amp; origins</h3><p><a href="https://nipunbatra.github.io/">Nipun Batra</a><br><a href="https://manojgulati.wordpress.com/">Manoj Gulati</a></p><p>Original research at <a href="https://iiitd.ac.in/">IIIT Delhi</a>, with UCLA collaboration. See the paper for affiliations at publication.</p></div><div><h3>Acknowledgements</h3><p>The original project acknowledges support from NSF–DeitY and TCS Research &amp; Development.</p><p><a href="https://github.com/nipunbatra/Home_Deployment/issues">Questions about the deployment</a><br><a href="https://github.com/iawe/iawe.github.io">Website source</a></p></div></div><div class="footer-bottom"><span>2013 DEPLOYMENT · 2026 OFFICIAL ARCHIVE</span><span><a href="https://creativecommons.org/licenses/by/4.0/">Dataset: CC BY 4.0</a> · <a href="#download">Download</a> · <a href="#faq">FAQ</a></span></div></div></footer>
 <script>
-for(const button of document.querySelectorAll('[data-copy]')){button.addEventListener('click',async()=>{const text=document.getElementById(button.dataset.copy).textContent;const status=document.getElementById('copy-status');try{await navigator.clipboard.writeText(text);button.textContent='Copied';status.textContent='BibTeX citation copied to clipboard.';setTimeout(()=>{button.textContent='Copy BibTeX'},2000)}catch{const range=document.createRange();range.selectNodeContents(document.getElementById(button.dataset.copy));const selection=window.getSelection();selection.removeAllRanges();selection.addRange(range);status.textContent='Citation selected. Use your browser copy command.';button.textContent='Selected'}})}
+const gallery = document.querySelector('.gallery');
+const slides = [...gallery.querySelectorAll('.gallery-slide')];
+const toolbar = gallery.querySelector('.gallery-toolbar');
+const slideCount = gallery.querySelector('.gallery-count');
+const slideStatus = gallery.querySelector('.gallery-status');
+let currentSlide = 0;
+
+function changeSlide(step) {
+  slides[currentSlide].hidden = true;
+  currentSlide = (currentSlide + step + slides.length) % slides.length;
+  const slide = slides[currentSlide];
+  slide.hidden = false;
+  slideCount.textContent = (currentSlide + 1) + ' / ' + slides.length;
+  slideStatus.textContent = 'Slide ' + (currentSlide + 1) + ' of ' + slides.length
+    + '. ' + slide.querySelector('figcaption').innerText.trim().replace(/\s+/g, ' ');
+}
+
+toolbar.hidden = false;
+for (const button of toolbar.querySelectorAll('[data-step]')) {
+  button.addEventListener('click', () => changeSlide(Number(button.dataset.step)));
+}
+gallery.addEventListener('keydown', event => {
+  if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
+  event.preventDefault();
+  changeSlide(event.key === 'ArrowLeft' ? -1 : 1);
+});
+
+const gallerySlides = gallery.querySelector('.gallery-slides');
+let swipeStart;
+gallerySlides.addEventListener('touchstart', event => {
+  swipeStart = event.touches.length === 1 ? event.touches[0] : null;
+}, { passive: true });
+gallerySlides.addEventListener('touchcancel', () => { swipeStart = null; }, { passive: true });
+gallerySlides.addEventListener('touchend', event => {
+  if (!swipeStart || event.touches.length) return;
+  const touch = event.changedTouches[0];
+  const dx = touch.clientX - swipeStart.clientX;
+  const dy = touch.clientY - swipeStart.clientY;
+  swipeStart = null;
+  if (Math.abs(dx) > 48 && Math.abs(dx) > Math.abs(dy) * 1.4) {
+    changeSlide(dx < 0 ? 1 : -1);
+  }
+}, { passive: true });
+
+for (const button of document.querySelectorAll('[data-copy]')) {
+  const defaultLabel = button.textContent;
+  const source = document.getElementById(button.dataset.copy);
+  const status = document.getElementById('copy-status');
+  let resetTimer;
+
+  button.addEventListener('click', async () => {
+    clearTimeout(resetTimer);
+    try {
+      await navigator.clipboard.writeText(source.textContent);
+      button.textContent = 'Copied';
+      status.textContent = button.dataset.copy === 'motion-example'
+        ? 'Python example copied to clipboard.'
+        : 'BibTeX citation copied to clipboard.';
+    } catch {
+      const range = document.createRange();
+      range.selectNodeContents(source);
+      const selection = window.getSelection();
+      selection.removeAllRanges();
+      selection.addRange(range);
+      button.textContent = 'Selected';
+      status.textContent = 'Text selected. Use your browser copy command.';
+    }
+    resetTimer = setTimeout(() => { button.textContent = defaultLabel; }, 2000);
+  });
+}
 </script>
 </body></html>
