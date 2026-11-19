@@ -1,404 +1,54 @@
-<!DOCTYPE html>
-<!-- saved from url=(0066)http://twitter.github.com/bootstrap/examples/starter-template.html -->
+<!doctype html>
 <html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta charset="utf-8">
-    <title>iAWE</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <!-- Le styles -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {
-        padding-top: 40px; /* 60px to make the container go all the way to the bottom of the topbar */
-        }
-    </style>
-    <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Merienda:700' rel='stylesheet' type='text/css'>
-    <link href="css/style.css" rel="stylesheet">
-
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
-    <!-- Fav and touch icons -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144"
-          href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114"
-          href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72"
-          href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed"
-          href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-57-precomposed.png">
-    <link rel="shortcut icon" href="http://twitter.github.com/bootstrap/assets/ico/favicon.png">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>iAWE · Indian Dataset for Ambient Water and Energy</title>
+<meta name="description" content="One home. Multiple perspectives. Explore the official iAWE research dataset: electricity, water, ambient sensing and motion from a 2013 deployment in New Delhi.">
+<meta name="theme-color" content="#fffefa"><link rel="canonical" href="https://iawe.github.io/">
+<meta property="og:title" content="iAWE · A home, measured differently"><meta property="og:description" content="The Indian Dataset for Ambient Water and Energy. Official archive, documentation and original research."><meta property="og:type" content="website"><meta property="og:url" content="https://iawe.github.io/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23b52d24'/%3E%3Cpath d='M13 31 32 14 51 31M19 28v23h26V28M29 51V37h7v14' fill='none' stroke='%23fffefa' stroke-width='4'/%3E%3C/svg%3E">
+<style>
+:root{--paper:#fffefa;--ink:#222522;--muted:#60645e;--accent:#b52d24;--hover:#8f231c;--rule:#d4d6ce;--soft:#f0efe8;--water:#256579;--body:Arial,Helvetica,sans-serif;--mono:ui-monospace,SFMono-Regular,Consolas,monospace}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:100px}body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 var(--body);-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration-thickness:1px;text-underline-offset:5px}a:hover{color:var(--accent)}button{font:inherit;cursor:pointer}*:focus-visible{outline:3px solid var(--water);outline-offset:5px}::selection{background:#efc6bf;color:var(--ink)}.frame{width:min(1200px,calc(100% - 96px));margin:auto}.skip{position:fixed;top:-90px;left:20px;background:var(--ink);color:var(--paper);padding:12px;z-index:20}.skip:focus{top:10px}header{border-bottom:1px solid var(--rule);background:var(--paper);position:sticky;top:0;z-index:10}.nav{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:88px}.brand{display:flex;gap:16px;align-items:center;text-decoration:none}.wordmark{font-size:36px;font-weight:800;letter-spacing:-2px;line-height:1}.wordmark i{color:var(--accent);font-style:normal}.brand-note{font-size:12px;line-height:1.35;letter-spacing:.055em;text-transform:uppercase;border-left:1px solid var(--rule);padding-left:16px}nav{display:flex;gap:28px;align-items:center;font-size:14px;font-weight:600}nav a{text-decoration:none}nav .nav-download{border-bottom:2px solid var(--accent);padding:8px 0;color:var(--accent)}.eyebrow{font:600 12px/1.5 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:0 0 24px}.hero{display:grid;grid-template-columns:1.08fr 1fr;gap:40px;padding:76px 0 52px;align-items:center}.hero h1{font-size:clamp(54px,6.3vw,88px);line-height:.99;letter-spacing:-.065em;margin:0 0 28px;font-weight:750}.hero h1 span{color:var(--accent)}.intro{font-size:19px;line-height:1.6;max-width:44ch;color:var(--muted);margin:0 0 28px}.intro strong{color:var(--ink);font-weight:500}.actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center}.button{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:49px;padding:12px 20px;border:1px solid var(--ink);text-decoration:none;font-size:15px;font-weight:600;background:transparent;color:var(--ink)}.button.primary{background:var(--accent);border-color:var(--accent);color:var(--paper)}.button:hover{background:var(--ink);color:var(--paper)}.button.primary:hover{background:var(--hover);border-color:var(--hover)}.button svg{height:18px;width:18px;flex:none}.hero-meta{margin-top:22px;font:12px/1.6 var(--mono);color:var(--muted)}.hero-art{margin:0;position:relative}.hero-art svg{display:block;width:100%;height:auto}.hero-art figcaption{border-top:1px solid var(--rule);padding-top:12px;font:12px/1.5 var(--mono);color:var(--muted);display:flex;justify-content:space-between;gap:15px}.metrics{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--ink);border-bottom:1px solid var(--rule);margin-bottom:76px}.metric{padding:26px 20px 26px 0}.metric+.metric{border-left:1px solid var(--rule);padding-left:28px}.metric strong{display:block;font-size:35px;line-height:1.2;font-weight:500;letter-spacing:-.04em}.metric span{display:block;font-size:14px;color:var(--muted);margin-top:6px}.section{padding:64px 0;border-top:1px solid var(--rule)}.section-head{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-bottom:40px}.section h2{font-size:clamp(32px,3.4vw,47px);letter-spacing:-.045em;line-height:1.12;margin:0;max-width:18ch}.section-head p{color:var(--muted);margin:0;max-width:53ch}.section-head .eyebrow{margin-bottom:15px}.context-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:64px;align-items:start}.deployment{margin:0;background:var(--soft);border:1px solid var(--rule);padding:16px}.deployment img{width:100%;height:auto;display:block;mix-blend-mode:multiply}.deployment figcaption{font-size:13px;color:var(--muted);margin-top:15px}.observations{display:grid;gap:26px}.observation{border-top:1px solid var(--rule);padding-top:17px}.observation:first-child{border-color:var(--accent)}h3{font-size:21px;letter-spacing:-.025em;margin:0 0 7px;line-height:1.25}.observation p{margin:0;color:var(--muted);font-size:16px}.context-note{font-size:13px;margin:25px 0 0;color:var(--muted)}.stream-list{border-top:2px solid var(--ink)}.stream{display:grid;grid-template-columns:220px 1fr 200px;gap:30px;padding:27px 0;border-bottom:1px solid var(--rule);align-items:start}.stream h3{display:flex;gap:12px;align-items:center;font-size:23px}.stream-icon{width:26px;height:26px;color:var(--accent);flex:none}.stream.water .stream-icon{color:var(--water)}.stream p{margin:0;color:var(--muted);font-size:16px}.stream-stat{text-align:right;font:14px/1.65 var(--mono)}.stream-stat strong{display:block;font-weight:500;font-size:20px;letter-spacing:-.04em}.stream-stat span{color:var(--muted);font-size:12px}.stream small{font-size:13px;display:block;margin-top:6px;color:var(--muted)}.note{margin:24px 0 0;padding-left:18px;border-left:3px solid var(--accent);font-size:15px;max-width:87ch;color:var(--muted)}.download-section{background:var(--ink);color:var(--paper);padding:64px 0}.download-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:70px}.download-section .eyebrow{color:#b8bcb3}.download-section h2{font-size:clamp(38px,4vw,56px);line-height:1.05;letter-spacing:-.045em;margin:0 0 22px}.download-section p{color:#d0d3ca;font-size:17px}.download-section .button{margin:12px 0;color:var(--paper);border-color:#72776e}.download-section .button.primary{border-color:var(--accent)}.download-section a:not(.button):hover{color:#f2a79f}.download-meta{font:12px/1.8 var(--mono);color:#b8bcb3;margin-top:17px}.package{border-top:1px solid #72776e;margin-top:6px}.package-row{padding:17px 0;border-bottom:1px solid #50574e;display:grid;grid-template-columns:28px 1fr;gap:14px}.package-row svg{width:22px;height:22px;color:#c4c9bd;margin-top:3px}.package-row b{font-size:16px;font-weight:500;display:block}.package-row span{display:block;font-size:14px;color:#b8bcb3;margin-top:3px}.resources{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}.resource{border-top:2px solid var(--ink);padding:22px 0 0;text-decoration:none;display:block}.resource:hover h3{text-decoration:underline;text-underline-offset:5px}.resource h3{font-size:22px}.resource p{font-size:15px;color:var(--muted);margin:10px 0}.resource small{font:12px var(--mono);color:var(--accent)}.reading-grid{display:grid;grid-template-columns:.75fr 1.25fr;gap:64px}.faq details{border-bottom:1px solid var(--rule);padding:21px 0}.faq details:first-child{border-top:1px solid var(--ink)}summary{font-size:18px;font-weight:600;cursor:pointer;line-height:1.4;padding-right:16px}.faq details p{font-size:16px;color:var(--muted);margin:16px 0 0;max-width:67ch}.faq details a{color:var(--ink)}.faq-aside{margin-top:24px;color:var(--muted);font-size:16px;max-width:30ch}.paper{background:var(--soft)}.paper .section{border:0}.paper-title{font-size:clamp(29px,3vw,40px);letter-spacing:-.035em;line-height:1.15;max-width:27ch;margin:0 0 18px}.authors{font-size:16px;line-height:1.7;max-width:42ch}.citation-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px}.citation-box{border-top:1px solid var(--rule);padding-top:20px;margin-top:24px}.citation-box header{position:static;background:none;display:flex;justify-content:space-between;gap:20px;align-items:center;border:0}.citation-box h3{font-size:16px;margin:0}.copy{border:1px solid var(--rule);padding:5px 10px;font-size:13px;background:var(--paper);color:var(--ink)}.copy:hover{border-color:var(--accent);color:var(--accent)}pre{font:12px/1.7 var(--mono);overflow-x:auto;white-space:pre-wrap;overflow-wrap:anywhere;margin:15px 0 0;max-height:310px;padding:16px;background:var(--paper);border:1px solid var(--rule)}.citation-caption{font-size:14px;color:var(--muted)}footer{padding:48px 0 30px}.footer-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:48px;padding-bottom:42px}.footer-grid p{font-size:14px;color:var(--muted);margin:12px 0}.footer-grid h3{font-size:15px;margin-bottom:16px}.footer-grid a{display:inline-block}.footer-bottom{border-top:1px solid var(--rule);padding-top:20px;display:flex;justify-content:space-between;gap:20px;font:12px/1.6 var(--mono);color:var(--muted)}.footer-bottom a{color:var(--ink)}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(min-width:1600px){.hero{padding-top:95px;padding-bottom:70px}}@media(max-width:1000px){.frame{width:calc(100% - 48px)}.brand-note{display:none}.hero{gap:20px}.hero h1{font-size:64px}.stream{grid-template-columns:180px 1fr 160px;gap:20px}.context-grid{gap:32px}.download-grid{gap:36px}}@media(max-width:720px){html{scroll-padding-top:130px}.frame{width:calc(100% - 36px)}.nav{min-height:100px;flex-wrap:wrap;gap:12px;padding:15px 0}.wordmark{font-size:30px}nav{gap:20px;font-size:13px;flex:1;justify-content:flex-end}.nav-download{display:none}.hero{grid-template-columns:1fr;padding:45px 0 34px;gap:30px}.hero h1{font-size:clamp(55px,12vw,76px)}.hero-art{max-width:520px;width:100%;justify-self:center}.intro{font-size:18px}.metrics{grid-template-columns:1fr 1fr;margin-bottom:40px}.metric{padding:20px 0}.metric+.metric{padding-left:20px}.metric:nth-child(3){border-left:0;padding-left:0;border-top:1px solid var(--rule)}.metric:nth-child(4){border-top:1px solid var(--rule)}.metric strong{font-size:30px}.metric span{font-size:13px}.section{padding:44px 0}.section-head,.context-grid,.download-grid,.reading-grid,.citation-grid{grid-template-columns:1fr;gap:24px}.section-head{margin-bottom:28px}.section h2{max-width:22ch}.context-grid{gap:30px}.stream{grid-template-columns:1fr 120px;gap:10px 15px}.stream h3{grid-column:1;font-size:22px}.stream p{grid-column:1;grid-row:2}.stream-stat{grid-column:2;grid-row:1/3;font-size:12px}.stream-stat strong{font-size:17px}.resources{grid-template-columns:1fr;gap:26px}.download-section{padding:44px 0}.download-grid{gap:30px}.footer-grid{grid-template-columns:1fr 1fr;gap:28px}.footer-grid>div:first-child{grid-column:1/-1}.footer-bottom{flex-direction:column;gap:12px}.eyebrow{margin-bottom:18px}.faq-aside{max-width:none}.citation-grid{gap:30px}.citation-box{margin-top:18px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}@media print{header,button,.actions{display:none}.frame{width:100%}.hero{padding-top:0}.section{break-inside:avoid}.download-section{background:white;color:black}.download-section p{color:black}}
+</style>
 </head>
-
 <body>
-
-<!-- Navbar items -->
-<div class="navbar navbar-inverse navbar-fixed-top">
-    <div class="navbar-inner">
-        <div class="container">
-            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </a>
-            <a class="brand" href="#myCarousel">iAWE</a>
-
-            <div class="nav-collapse collapse">
-                <ul class="nav pull-right">
-                    <li class="active"><a href="#myCarousel">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#features">Features</a></li>
-                    <li><a href="#download">Download</a></li>
-                    <li><a href="#faq">FAQ</a></li>
-                    <li><a href="#paper">Paper</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-            <!--/.nav-collapse -->
-        </div>
-    </div>
-</div>
-
-<div id="myCarousel" class="carousel slide">
-    <!-- Carousel items -->
-    <div class="carousel-inner">
-        <div class="active item">
-            <!-- Put your photo link in the src attribute -->
-            <img src="img/overall_deployment.jpg" width="100%" height="35%" alt="">
-
-            <div class="container">
-                <div class="carousel-caption">
-                    <h1>Overall deployment</h1>
-
-                </div>
-            </div>
-        </div>
-        <div class="item">
-            <!-- Put your photo link in the src attribute -->
-            <img src="img/water_meter.jpg" alt="">
-
-            <div class="container">
-                <div class="carousel-caption">
-                    <h1>Pulse based Water meter</h1>
-
-                </div>
-            </div>
-        </div>
-
-        <div class="item">
-            <!-- Put your photo link in the src attribute -->
-            <img src="img/ambient.jpg" alt="">
-
-            <div class="container">
-                <div class="carousel-caption">
-                    <h1>Ambient paramter sensing</h1>
-
-                </div>
-            </div>
-        </div>
-
-        <div class="item">
-            <!-- Put your photo link in the src attribute -->
-            <img src="img/ct_interference.jpg" alt="">
-
-            <div class="container">
-                <div class="carousel-caption">
-                    <h1>Electricity<br/> measurement<br/>at circuit<br/>level </h1>
-
-                </div>
-            </div>
-        </div>
-
-        <div class="item">
-            <!-- Put your photo link in the src attribute -->
-            <img src="img/jplug.jpg" alt="">
-
-            <div class="container">
-                <div class="carousel-caption">
-                    <h1>Electricity<br/> measurement<br/>at appliance<br/>level </h1>
-
-                </div>
-            </div>
-        </div>
-
-        <div class="item">
-            <!-- Put your photo link in the src attribute -->
-            <img src="img/meter.jpg" alt="">
-
-            <div class="container">
-                <div class="carousel-caption">
-                    <h1>Electricity<br/> measurement<br/>at meter<br/>level </h1>
-
-                </div>
-            </div>
-        </div>
-
-
-    </div>
-    <!-- Carousel nav -->
-    <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-    <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
-</div>
-
-<!-- Page items -->
-<div class="container">
-    <!-- About items -->
-    <div id="about">
-        <div id="heading">
-            <h1>Indian Dataset for Ambient Water and Energy</h1>
-
-            <p class="lead">In the summer of 2013, we decided to instrument a home in New Delhi India with an aim to
-                characterize the unique aspects of energy monitoring an consumption in India. In total we collected
-                about 73 days of data. </p>
-        </div>
-        <div class="divider"></div>
-        <div class="row">
-            <div class="span4">
-                <!-- Put your photo link in the src attribute -->
-                <img class="img-polaroid" src="img/electricity_distribution.jpg" height="30%" width="60%" alt="">
-            </div>
-            <div class="span8">
-                <p class="lead">Electricity was measured at all 3 levels:
-                <ol>
-                    <li> Electricity meter: Using Schneider Electric EM6400 sensor</li>
-                    <li> Circuit panel</li>
-                    <li> Appliance level</li>
-                </ol>
-                </p>
-
-            </div>
-        </div>
-        <div class="row">
-            <div class="span8">
-                <p class="lead">Power outages are still common in India! Yes, even in Delhi. During the deployment, we
-                    observed power outage lasting up to 9 hours a day.</p>
-
-            </div>
-            <div class="span4">
-                <!-- Put your photo link in the src attribute -->
-                <img class="img-polaroid" src="img/outage.png" width="80%" alt="">
-            </div>
-        </div>
-    </div>
-
-
-    <div class="row">
-        <div class="span4">
-            <!-- Put your photo link in the src attribute -->
-            <img class="img-polaroid" src="img/water_distribution.jpg" height="30%" width="60%" alt="">
-        </div>
-        <div class="span8">
-            <p class="lead">Water supply is not available 24X7. Infact, usually only available for a few hours a day. To
-                overcome this, almost everyone has an overhead storage tank where water is stored. We measured the
-                volume of water flow from the supply and usage from the overhead tank.</p>
-
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="span8">
-            <p class="lead">Voltage can be observed to fluctuate a lot. While the rated voltage is 230 V, we observed
-                voltages ranging from 180-260V.</p>
-
-        </div>
-        <div class="span4">
-            <!-- Put your photo link in the src attribute -->
-            <img class="img-polaroid" src="img/voltage.png" width="80%" alt="">
-        </div>
-    </div>
-</div>
-
-
-<div class="row">
-    <div class="span4">
-        <!-- Put your photo link in the src attribute -->
-        <img class="img-polaroid" src="img/network.png" height="70%" width="70%" alt="">
-    </div>
-    <div class="span8">
-        <p class="lead">What about the network? We observed that internet is not the most reliable. Packet drop is very
-            common. We quantified that and found upt 25% packet drop a day.</p>
-
-    </div>
-</div>
-
-<div class="row">
-    <div class="span8">
-        <p class="lead">How did we resolve this packet drop? We introduce a notion of local storage in our arhitecture
-            which also compensates for other failures.</p>
-
-    </div>
-    <div class="span4">
-        <!-- Put your photo link in the src attribute -->
-        <img class="img-polaroid" src="img/architecture.jpg" width="80%" alt="">
-    </div>
-</div>
-</div>
-
-
-<div class="divider"></div>
-
-<div class="divider"></div>
-<!-- Screenshot items -->
-<div id="features" class="row">
-    <div class="span4">
-        <img src="img/gear-icon.png" alt="">
-
-        <h3>Github repo</h3>
-
-        <p>Take a look at our <a href="https://github.com/nipunreddevil/Home_Deployment">Github repository</a> which
-            contains all the issues we faced and how we resolved them.</p>
-    </div>
-    <div class="span4">
-        <img src="img/gear-icon.png" alt="">
-
-        <h3>What about DB schemas?</h3>
-
-        <p>Right <a
-                href="https://github.com/nipunreddevil/Home_Deployment/tree/master/configuration/db_schemas">here</a>!
-            Making it easy for you to replicate such deployments.</p>
-    </div>
-    <div class="span4">
-        <img src="img/monitoring-icon.png" alt="">
-
-        <h3>Starter IPython notebooks</h3>
-
-        <p>Why take trouble and code from scratch? Start with our <a
-                href="http://nbviewer.ipython.org/github/nipunreddevil/Home_Deployment/tree/master/notebooks/">IPython
-            notebooks</a> which illusrate common functionalities</p>
-    </div>
-    <div class="span4">
-        <img src="img/multi-files-icon.png" alt="">
-
-        <h3>Metadata</h3>
-
-        <p>Wouldn't it be useful if the <a
-                href="https://github.com/nipunreddevil/Home_Deployment/wiki/Appliance-Metadata">rated power</a> of all
-            appliances was known? Or which appliance is mapped to which <a
-                    href="https://github.com/nipunreddevil/Home_Deployment/blob/master/configuration/circuits.md">circuit</a>?
-            Check out our <a
-                    href="https://github.com/nipunreddevil/Home_Deployment/tree/master/configuration">metadata</a> to
-            know more.</p>
-    </div>
-    <div class="span4">
-        <img src="img/multi-files-icon.png" alt="">
-
-        <h3>Installation instructions</h3>
-
-        <p>How to download the data set and quickly set up the environment</p>
-    </div>
-    <div class="span4">
-        <img src="img/multi-files-icon.png" alt="">
-
-        <h3>Why so many sensors?</h3>
-
-        <p>Take a look <a
-                href="https://github-camo.global.ssl.fastly.net/d30aa5a421c900d1b2b55e5f863a5be0cc024b90/68747470733a2f2f646c2e64726f70626f7875736572636f6e74656e742e636f6d2f752f37353834353632372f4465706c6f796d656e742f6c6162656c5f616e6e6f74617465642e706e67">here</a>!
-            You will realize the additional value by summing up sensor data.</p>
-    </div>
-</div>
-<div class="divider"></div>
-<!-- Download items -->
-<div id="download" class="row">
-
-    <h3><a href="https://doi.org/10.5281/zenodo.24361973">Download the official iAWE archive</a></h3>
-    <p>Version 1.0.0 includes the original electricity CSV archive and legacy HDF5, water and ambient streams, motion data, selected annotations, and documentation with checksums. Released under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</p>
-    <p>Please cite both the <a href="https://doi.org/10.5281/zenodo.24361973">versioned dataset</a> and the <a href="https://doi.org/10.1145/2528282.2528293">original BuildSys 2013 paper</a>. See the documentation archive for quickstart instructions, stream differences and data-quality limitations.</p>
-
-
-        <!-- COMMENTED
-            <ul class="inline">
-              <li><a href="#" class="btn btn-large btn-success">Try it FREE for 14 days</a></li>
-              <li><a href="#" class="btn btn-large btn-info">Buy it now</a></li>
-            </ul>
-           -->
-
-</div>
-
-<hr/>
-
-<div class="container" id="faq">
-    <h1>FAQ</h1>
-
-<script src="https://gist.github.com/nipunbatra/52ac6e5ba32e7260c4e9.js"></script></div>
-<hr/>
-
-<div class="container" id="paper">
-    <div class="row">
-        <div class="span6">
-            <h3>Paper & Slides</h3>
-
-            <p><a href="https://nipunbatra.github.io/lab/papers/2013/buildsys_2013.pdf">Author version</a></p>
-
-            <p><a href="https://dl.dropboxusercontent.com/u/75845627/builldsys.pdf">Slides</a> presented at Buildsys
-                2013</p>
-        </div>
-
-        <div class="span6">
-            <h3>Citation</h3>
-
-            <p><a href="https://doi.org/10.1145/2528282.2528293">Original paper DOI</a> &middot; <a href="https://doi.org/10.5281/zenodo.24361973">Dataset DOI and citations</a>. BibTeX for both is included in the dataset documentation archive.</p>
-
-        </div>
-
-    </div>
-
-</div>
-
-
-
-
-<!-- /container -->
-<!-- Footer items -->
-<footer>
-    <div class="container" id="contact">
-        <div class="row">
-            <div class="span6">
-                <h3>Acknowledgements</h3>
-
-                <p>We would like to thank NSF-DieTY, TCS R and D</p>
-            </div>
-            <div class="span6">
-                <h3>Contact</h3>
-
-                <p><a href="http://nipunbatra.github.io"> Nipun Batra</a>, <a href="http://manojgulati.wordpress.com">
-                    Manoj Gulati</a> <br>
-                    PhD. scholars, <a href="http://iiitd.ac.in">IIIT Delhi</a></p>
-
-            </div>
-        </div>
-
-    </div>
-    </div>
-</footer>
-
-<!-- Le javascript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-<script>window.jQuery || document.write("<script src='js/jquery-1.8.3.min.js'>\x3C/script>")</script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.easing.1.3.js"></script>
-<script type="text/javascript">
-      $(document).ready(function() {
-        $('a[href^="#"]').click(function(event) {
-            var id = $(this).attr("href");
-            var offset = 60;
-            var target = $(id).offset().top - offset;
-            $('html, body').animate({scrollTop:target}, 800, $.easing.easeInOutExpo());
-            event.preventDefault();
-        });
-      });
-
+<a class="skip" href="#main">Skip to content</a>
+<header><div class="frame nav"><a class="brand" href="#myCarousel" aria-label="iAWE home"><span class="wordmark"><i>i</i>AWE</span><span class="brand-note">Ambient<br>Water &amp; Energy</span></a><nav aria-label="Main navigation"><a href="#about">The dataset</a><a href="#features">Explore</a><a href="#paper">Paper &amp; citation</a><a class="nav-download" href="#download">Get the data</a></nav></div></header>
+<main id="main">
+<div class="frame" id="myCarousel"><section class="hero" aria-labelledby="hero-title"><div><p class="eyebrow">New Delhi, India · Field deployment, 2013</p><h1 id="hero-title">A home,<br>measured<br><span>differently.</span></h1><p class="intro"><strong>Indian Dataset for Ambient Water and Energy.</strong> Electricity, water and everyday activity, observed together in one real home.</p><div class="actions"><a class="button primary" href="https://doi.org/10.5281/zenodo.24361973"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5"/></svg>Download official archive</a><a class="button" href="#paper">Read the paper</a></div><p class="hero-meta">OPEN RESEARCH DATA · VERSION 1.0.0 · CC BY 4.0</p></div>
+<figure class="hero-art"><svg viewBox="0 0 560 545" role="img" aria-labelledby="house-title house-desc"><title id="house-title">One home, connected measurements</title><desc id="house-desc">Illustrative cutaway of a three-storey home, with separate paths for electricity, water and ambient sensing. This is a schematic, not a floor plan or measured data plot.</desc><defs><pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r=".8" fill="#c4c7bd"/></pattern></defs><rect x="10" y="10" width="540" height="510" fill="url(#grid)"/><path d="M142 149 320 61 470 137 291 226Z" fill="#e9e7df" stroke="#222522" stroke-width="1.5"/><path d="M142 149v270l149 77V226Z" fill="#fffefa" stroke="#222522" stroke-width="1.5"/><path d="M291 226 470 137v270l-179 89Z" fill="#f0efe8" stroke="#222522" stroke-width="1.5"/><path d="m142 239 149 77 179-89M142 329l149 77 179-89" stroke="#222522" stroke-width="1.5" fill="none"/><path d="m162 184 54 28v48l-54-28Zm0 90 54 28v48l-54-28Zm0 90 54 28v48l-54-28Z" stroke="#a5aaa0" fill="#f0efe8"/><path d="m318 254 57-28v43l-57 28Zm0 90 57-28v43l-57 28Zm0 90 57-28v43l-57 28Z" fill="#fffefa" stroke="#a5aaa0"/><path d="M252 132v331M252 221l-23-12m23 102-23-12m23 102-23-12" stroke="#b52d24" stroke-width="4" fill="none"/><path d="M423 119v309l-40 21M423 264l-28 14m28 76-28 14" stroke="#256579" stroke-width="4" fill="none"/><path d="m391 108 32-16 33 16v28l-33 16-32-16Z" fill="#dce8e9" stroke="#256579" stroke-width="1.5"/><path d="m391 108 32 16 33-16m-33 16v28" stroke="#256579" fill="none"/><circle cx="252" cy="221" r="7" fill="#b52d24" stroke="#fffefa" stroke-width="2"/><circle cx="252" cy="311" r="7" fill="#b52d24" stroke="#fffefa" stroke-width="2"/><circle cx="252" cy="401" r="7" fill="#b52d24" stroke="#fffefa" stroke-width="2"/><circle cx="423" cy="354" r="7" fill="#256579" stroke="#fffefa" stroke-width="2"/><rect x="218" y="141" width="20" height="25" fill="#fffefa" stroke="#b52d24" stroke-width="2" transform="skewY(0)"/><path d="m230 145-7 9h7l-7 9" fill="none" stroke="#b52d24" stroke-width="1.7"/><path d="M182 352v-7m-9 4-4-4m17 5 4-3" stroke="#60645e" stroke-width="1.5"/><circle cx="181" cy="361" r="5" fill="#60645e"/><path d="M240 153H77v-41M423 196h89M181 361H63v43" fill="none" stroke="#60645e" stroke-width="1"/><g font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#222522"><text x="27" y="76" font-weight="700">ELECTRICITY</text><text x="27" y="97" fill="#60645e">Meter to appliance</text><text x="425" y="223" font-weight="700">WATER</text><text x="425" y="243" fill="#60645e">Inlet &amp; outlet</text><text x="25" y="429" font-weight="700">AMBIENT</text><text x="25" y="449" fill="#60645e">Light · temperature</text><text x="25" y="469" fill="#60645e">Motion events</text></g><path d="M48 506h464" stroke="#222522"/><path d="M48 501v10m464-10v10" stroke="#222522"/></svg><figcaption><span>ONE HOME. MULTIPLE PERSPECTIVES.</span><span>Illustrative schematic</span></figcaption></figure></section>
+<div class="metrics" aria-label="Deployment at a glance"><div class="metric"><strong>73 days</strong><span>Reported deployment period*</span></div><div class="metric"><strong>33 sensors</strong><span>Original multimodal deployment</span></div><div class="metric"><strong>12 meters</strong><span>In the electricity archive</span></div><div class="metric"><strong>One home</strong><span>New Delhi, India</span></div></div>
+<section id="about" class="section"><div class="section-head"><div><p class="eyebrow">The setting matters</p><h2>Real homes.<br>Real interruptions.</h2></div><p>Collected in a three-storey home during the summer of 2013, iAWE connects energy use with the conditions around it. The deployment captures an Indian household with intermittent electricity and water supply, voltage variation and imperfect connectivity.</p></div><div class="context-grid"><figure class="deployment"><img src="https://iawe.github.io/img/overall_deployment.jpg" width="1200" height="700" loading="lazy" alt="Original iAWE deployment overview showing the home's sensing setup"><figcaption>The original deployment overview. See the <a href="https://github.com/nipunbatra/Home_Deployment">Home_Deployment repository</a> for instrumentation and collection notes.</figcaption></figure><div class="observations"><div class="observation"><h3>Beyond a single power meter</h3><p>The original deployment measured electricity at household, circuit and appliance levels, alongside water and ambient conditions.</p></div><div class="observation"><h3>Infrastructure is part of the story</h3><p>Power outages, overhead water storage and acquisition gaps make this a dataset of real operating conditions, not an idealized laboratory.</p></div><div class="observation"><h3>Context for better questions</h3><p>Study appliance-level demand, connect motion and ambient observations, or examine the reliability of a long-running sensing deployment.</p></div></div></div><p class="context-note">*73 days describes the deployment reported in the paper, not uniform coverage of every stream. Some electricity records extend into September 2013.</p></section>
+<section id="features" class="section"><div class="section-head"><div><p class="eyebrow">Inside the archive</p><h2>Different streams.<br>A shared setting.</h2></div><p>Start with the modality your question needs. The official release preserves original electricity files and provides documented CSV exports for the other recovered streams.</p></div><div class="stream-list">
+<article class="stream"><h3><svg class="stream-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m14 2-9 12h6l-1 8 9-13h-6Z"/></svg>Electricity</h3><p>Original meter CSVs and appliance labels, plus the historical NILMTK HDF5 representation. Power, voltage and other electrical measurements depend on the meter.<small>electricity.tar.gz · iawe.h5</small></p><div class="stream-stat"><strong>12 meters</strong><span>CSV + legacy HDF5</span></div></article>
+<article class="stream water"><h3><svg class="stream-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C9 7 5 11 5 15a7 7 0 0 0 14 0c0-4-4-8-7-13Z"/></svg>Water</h3><p>Pulse-state records from the water-meter system. These are not calibrated volume or flow-rate measurements.<small>Legacy CSV and SQL-derived alternatives</small></p><div class="stream-stat"><strong>32,250,081</strong><span>rows per source variant</span></div></article>
+<article class="stream"><h3><svg class="stream-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="4"/><path d="M12 1v4m0 14v4M1 12h4m14 0h4M4 4l3 3m10 10 3 3M4 20l3-3M17 7l3-3"/></svg>Ambient</h3><p>Light on the device’s 0–100 scale and temperature in Fahrenheit, indexed by sensor node and timestamp.<small>Legacy CSV and SQL-derived alternatives</small></p><div class="stream-stat"><strong>4,310,173</strong><span>rows per source variant</span></div></article>
+<article class="stream"><h3><svg class="stream-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="5" cy="12" r="2"/><path d="M10 7a7 7 0 0 1 0 10M14 3a12 12 0 0 1 0 18"/></svg>Motion</h3><p>PIR detections, recorded as a timestamp and node ID. An event indicates detected motion, not continuous occupancy.</p><div class="stream-stat"><strong>966,798</strong><span>motion records</span></div></article>
+<article class="stream"><h3><svg class="stream-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12h4l3-7 5 14 4-7h4"/></svg>Diagnostics</h3><p>System and acquisition conditions, including client and server times. Device IDs and types are replaced with stable pseudonyms.</p><div class="stream-stat"><strong>2,671,802</strong><span>diagnostic records</span></div></article>
+<article class="stream"><h3><svg class="stream-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 3h14v18H5ZM8 8h8m-8 4h8m-8 4h5"/></svg>Annotations</h3><p>A controlled-event trace and four original companion streams. The original repository documents 101 controlled electrical events on August 4, 2013.<small>Includes selected companion files, not every original public file</small></p><div class="stream-stat"><strong>Selected traces</strong><span>With provenance notes</span></div></article></div><p class="note">The ambient and water source variants have equal row counts but are not verified identical. They are alternatives, not additional observations to concatenate. Raw electricity and legacy HDF5 also differ in row counts.</p></section></div>
+<section id="download" class="download-section"><div class="frame download-grid"><div><p class="eyebrow">Official archive · v1.0.0</p><h2>Ready for your<br>next question.</h2><p>Get the data, checksums and documentation from the versioned Zenodo record. No institutional sign-in or legacy file-sharing link needed.</p><a class="button primary" href="https://doi.org/10.5281/zenodo.24361973">Download official archive</a><div class="download-meta">DOI: 10.5281/zenodo.24361973<br>Released under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0</a></div></div><div class="package"><div class="package-row"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 5h7l2 3h9v13H3Z"/></svg><div><b>Ten data files</b><span>Original electricity archives, documented CSV streams, controlled-event trace and annotation companions.</span></div></div><div class="package-row"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M5 2h10l4 4v16H5Zm4 7h6m-6 4h6m-6 4h6"/></svg><div><b>A guide to what you’re downloading</b><span>README, quickstart, data dictionary, provenance and known data-quality limitations.</span></div></div><div class="package-row"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 2 3 6v7c0 5 9 9 9 9s9-4 9-9V6Z"/><path d="m7 12 3 3 7-7"/></svg><div><b>Verify and cite your version</b><span>SHA-256 checksums and BibTeX for the dataset and original paper.</span></div></div></div></div></section>
+<div class="frame"><section class="section" aria-labelledby="resources-title"><div class="section-head"><div><p class="eyebrow">Research resources</p><h2 id="resources-title">Start with the context.</h2></div><p>The archive is one part of the record. Explore the original instrumentation, sensor mappings and analysis notebooks before choosing your preprocessing.</p></div><div class="resources"><a class="resource" href="https://github.com/nipunbatra/Home_Deployment"><small>CODE &amp; COLLECTION</small><h3>Home_Deployment</h3><p>Original sensor software, deployment issues and the decisions behind the measurements.</p></a><a class="resource" href="https://github.com/nipunbatra/Home_Deployment/wiki/Appliance-Metadata"><small>METADATA</small><h3>Know the appliances</h3><p>The published appliance inventory. Archive meter labels and inventory IDs are different identifier systems.</p></a><a class="resource" href="https://github.com/nipunbatra/Home_Deployment/tree/master/notebooks"><small>ANALYSIS</small><h3>Original notebooks</h3><p>Historical examples for examining temperatures, electricity and time ranges. Adapt their dependencies and assumptions.</p></a></div><p class="context-note">Also explore: <a href="https://github.com/nipunbatra/Home_Deployment/tree/master/configuration/db_schemas">Database schemas</a> · <a href="https://github.com/nipunbatra/Home_Deployment/blob/master/configuration/circuits.md">Circuit mappings</a> · <a href="https://github.com/nipunbatra/Home_Deployment/blob/master/dataset/Readme.md">Original annotations</a> · <a href="https://github.com/nilmtk/nilmtk/tree/master/nilmtk/dataset_converters/iawe/metadata">NILMTK metadata</a></p></section>
+<section id="faq" class="section reading-grid"><div><p class="eyebrow">Before you analyze</p><h2>A few things<br>worth knowing.</h2><p class="faq-aside">Good results begin with explicit assumptions. The release documentation records the differences that matter.</p><a href="https://gist.github.com/nipunbatra/52ac6e5ba32e7260c4e9">Read the original author FAQ</a></div><div class="faq"><details open><summary>Does every sensor cover all 73 days?</summary><p>No. Coverage, sampling and missingness vary by stream. The 73-day figure describes the original deployment. Some raw electricity records extend into September. Use the release data dictionary and inspect the actual timestamps for your chosen channels.</p></details><details><summary>Which electricity format should I use?</summary><p>Use original CSVs when you need raw timestamps and control over missing-data treatment. The historical HDF5 is a separate legacy representation with different row counts. For whole-home active power, deduplicate and align mains meters 1 and 2 before summing. A missing mains channel does not yield a valid whole-home observation.</p></details><details><summary>How do I interpret timestamps?</summary><p>Sensor timestamps are Unix seconds, representing UTC instants. Parse as UTC, then convert to Asia/Kolkata for local time. Water timestamps can be fractional. Negative and implausible legacy values remain in the archive. The controlled electrical annotation table instead uses IST clock times.</p></details><details><summary>Can I turn water records directly into litres?</summary><p>No. The records contain pulse states and acquisition anomalies, not calibrated volume. Validate timestamps, transitions and repeated readings. A complete fixture-level calibration table was not verified among the recovered artifacts.</p></details><details><summary>Is this every original deployment artifact?</summary><p>The release contains the cleared recovered research files, not an assertion that every historical artifact survives. Selected annotations are included. The separate original jPlug companion, which contains device identifiers, is not bundled; appliance measurements remain in the primary electricity archive. Diagnostics use pseudonymous device IDs.</p></details><details><summary>What should I cite?</summary><p>Cite both the original BuildSys 2013 paper and the version-specific dataset DOI below. If you use NILMTK software, cite the <a href="https://doi.org/10.1145/2602044.2602051">NILMTK paper</a> as well. Dataset files are CC BY 4.0; linked software and the original paper retain their separate terms.</p></details></div></section></div>
+<section id="paper" class="paper"><div class="frame section"><p class="eyebrow">The research behind the data</p><div class="citation-grid"><div><h2 class="paper-title">It’s Different: Insights into Home Energy Consumption in India</h2><p class="authors">Nipun Batra, Manoj Gulati, Amarjeet Singh<br>and Mani B. Srivastava</p><p class="citation-caption">BuildSys 2013 · 5th ACM Workshop on Embedded Systems for Energy-Efficient Buildings</p><div class="actions"><a class="button" href="https://nipunbatra.github.io/lab/papers/2013/buildsys_2013.pdf">Read author PDF</a><a href="https://doi.org/10.1145/2528282.2528293">Paper DOI</a></div><div class="citation-box"><header><h3>Original paper</h3><button class="copy" data-copy="paper-bib">Copy BibTeX</button></header><pre id="paper-bib">@inproceedings{batra2013different,
+  author = {Batra, Nipun and Gulati, Manoj and Singh, Amarjeet and Srivastava, Mani B.},
+  title = {It's Different: Insights into Home Energy Consumption in India},
+  booktitle = {Proceedings of the 5th ACM Workshop on Embedded Systems for Energy-Efficient Buildings},
+  year = {2013},
+  pages = {3:1--3:8},
+  publisher = {ACM},
+  doi = {10.1145/2528282.2528293}
+}</pre></div></div><div><p class="eyebrow">Please cite both</p><h3 class="paper-title">The official archive.<br>A reproducible reference.</h3><p class="authors">iAWE: Indian Dataset for Ambient Water and Energy (Official Archive)</p><p class="citation-caption">Version 1.0.0 · Zenodo · 2026<br>Use the version DOI for the files you analyzed.</p><a href="https://doi.org/10.5281/zenodo.24361973">Dataset DOI and release record</a><div class="citation-box"><header><h3>Dataset release</h3><button class="copy" data-copy="dataset-bib">Copy BibTeX</button></header><pre id="dataset-bib">@misc{batra2026iawe,
+  author = {Batra, Nipun and Gulati, Manoj and Singh, Amarjeet and Srivastava, Mani B.},
+  title = {{iAWE}: Indian Dataset for Ambient Water and Energy (Official Archive)},
+  year = {2026},
+  publisher = {Zenodo},
+  version = {1.0.0},
+  doi = {10.5281/zenodo.24361973}
+}</pre></div></div></div><p id="copy-status" class="sr-only" role="status" aria-live="polite"></p></div></section>
+</main>
+<footer id="contact"><div class="frame"><div class="footer-grid"><div><a class="brand" href="#myCarousel"><span class="wordmark"><i>i</i>AWE</span></a><p>Indian Dataset for Ambient Water and Energy.<br>Collected in New Delhi. Built for research.</p><a href="https://sustainability-lab.github.io/">Sustainability Lab · IIT Gandhinagar</a></div><div><h3>People &amp; origins</h3><p><a href="https://nipunbatra.github.io/">Nipun Batra</a><br><a href="https://manojgulati.wordpress.com/">Manoj Gulati</a></p><p>Original research at <a href="https://iiitd.ac.in/">IIIT Delhi</a>, with UCLA collaboration. See the paper for affiliations at publication.</p></div><div><h3>Acknowledgements</h3><p>The original project acknowledges support from NSF–DeitY and TCS Research &amp; Development.</p><p><a href="https://github.com/nipunbatra/Home_Deployment/issues">Questions about the deployment</a><br><a href="https://github.com/iawe/iawe.github.io">Website source</a></p></div></div><div class="footer-bottom"><span>2013 DEPLOYMENT · 2026 OFFICIAL ARCHIVE</span><span><a href="https://creativecommons.org/licenses/by/4.0/">Dataset: CC BY 4.0</a> · <a href="#download">Download</a> · <a href="#faq">FAQ</a></span></div></div></footer>
+<script>
+for(const button of document.querySelectorAll('[data-copy]')){button.addEventListener('click',async()=>{const text=document.getElementById(button.dataset.copy).textContent;const status=document.getElementById('copy-status');try{await navigator.clipboard.writeText(text);button.textContent='Copied';status.textContent='BibTeX citation copied to clipboard.';setTimeout(()=>{button.textContent='Copy BibTeX'},2000)}catch{const range=document.createRange();range.selectNodeContents(document.getElementById(button.dataset.copy));const selection=window.getSelection();selection.removeAllRanges();selection.addRange(range);status.textContent='Citation selected. Use your browser copy command.';button.textContent='Selected'}})}
 </script>
-
-
-</body>
-</html>
+</body></html>
